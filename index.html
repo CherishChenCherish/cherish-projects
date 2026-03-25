@@ -149,21 +149,26 @@ footer p{font-size:11px;color:var(--text3)}
     <a href="javascript:void(0)" onclick="goHome()">Projects</a>
     <a href="javascript:void(0)" onclick="goAbout()">About</a>
     <a href="https://github.com/CherishChenCherish" target="_blank">GitHub</a>
-    <a href="mailto:xinlong.chen@yale.edu" class="nav-cta">Contact</a>
+    <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank">LinkedIn</a>
+    <a href="mailto:xinlong.chen@yale.edu" class="nav-cta">Get in Touch</a>
   </div>
 </nav>
 
 <div id="home">
 
 <section class="hero">
-  <div class="hero-sub">Yale &middot; Alibaba &middot; Kaggle Top 5% &middot; ML Engineer</div>
-  <h1>I build systems that<br><em>think, trade, and assist</em></h1>
-  <p class="hero-desc">Production AI systems across real-time speech, quantitative finance, and developer tools. From 50-100 GB/day data pipelines at Alibaba to autonomous 24/7 trading signals.</p>
+  <div class="hero-sub">ML Engineer &middot; Data Scientist &middot; Full-Stack Builder</div>
+  <h1>Cherish Chen</h1>
+  <p class="hero-desc">Yale M.S. &rsquo;27 &middot; Ex-Alibaba &middot; Kaggle Top 5%<br>I build production AI systems &mdash; from 100 GB/day data pipelines to real-time streaming inference. Currently seeking 2026 summer internships in ML engineering, data science, and applied AI.</p>
   <div class="hero-stats">
-    <div class="stat"><div class="stat-n green">24/7</div><div class="stat-l">Autonomous Uptime</div></div>
+    <div class="stat"><div class="stat-n green">24/7</div><div class="stat-l">Live Production System</div></div>
     <div class="stat"><div class="stat-n blue">Top 5%</div><div class="stat-l">Kaggle / 11K+</div></div>
     <div class="stat"><div class="stat-n gold">100GB</div><div class="stat-l">Daily Pipeline</div></div>
     <div class="stat"><div class="stat-n" style="color:var(--purple)">3.86</div><div class="stat-l">GPA / Dean's List</div></div>
+  </div>
+  <div style="display:flex;gap:12px;justify-content:center;margin-top:36px;opacity:0;animation:fu .7s .7s forwards">
+    <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank" class="btn-p" style="padding:12px 28px;font-size:13px;border-radius:100px;text-decoration:none">LinkedIn</a>
+    <a href="mailto:xinlong.chen@yale.edu" class="btn-s" style="padding:12px 28px;font-size:13px;border-radius:100px;text-decoration:none;border:1px solid var(--border2);color:var(--text2)">xinlong.chen@yale.edu</a>
   </div>
   <div class="hero-scroll"><span></span></div>
 </section>
@@ -205,7 +210,10 @@ footer p{font-size:11px;color:var(--text3)}
         <div class="tags">
           <span class="tag">Whisper</span><span class="tag">Ollama</span><span class="tag">FastAPI</span><span class="tag">WebSocket Streaming</span><span class="tag">HMAC License</span>
         </div>
-        <div class="arrow">View architecture &amp; details &rarr;</div>
+        <div style="display:flex;gap:10px;align-items:center;margin-top:18px">
+          <span class="arrow" style="margin:0">View details &rarr;</span>
+          <a href="https://github.com/CherishChenCherish/live-assistant" target="_blank" onclick="event.stopPropagation()" style="font-size:10px;color:var(--text3);border:1px solid var(--border);padding:3px 9px;border-radius:100px;text-decoration:none">Source Code</a>
+        </div>
       </div>
     </a>
 
@@ -234,7 +242,7 @@ footer p{font-size:11px;color:var(--text3)}
   <div class="sec-label">About</div>
   <div class="sec-title">Cherish Chen</div>
   <div class="about-wrap">
-    <p>M.S. Health Informatics (STEM) at <strong>Yale University</strong>, focused on applied ML, clinical NLP, and healthcare data systems. Double major B.S. Informatics: Data Science + B.A. Economics at <strong>University of Washington</strong> &mdash; 3.86 GPA, Dean's List for 10 quarters.</p>
+    <p>M.S. Health Informatics (STEM) at <strong>Yale University</strong> (graduating May 2027), focused on applied ML, clinical NLP, and healthcare data systems. Double major B.S. Informatics: Data Science + B.A. Economics at <strong>University of Washington</strong> &mdash; 3.86 GPA, Dean's List for 10 quarters. Bilingual English/Chinese.</p>
     <p>Previously: <strong>Data Mining Engineer at Alibaba (Ele.me)</strong> building 50-100 GB/day pharmaceutical analytics pipelines, lifting conversion 15%. <strong>Business Analyst at Gate.io</strong> building RF+RNN ensembles on 50K+ users, driving 14% engagement. <strong>Summer Analyst at Mercer Consulting</strong> delivering C-suite compensation analytics with DBSCAN and neural networks.</p>
     <p>I build production systems end-to-end &mdash; from XGBoost fraud detection deployed on AWS (&lt;50ms, 0.94 AUPRC) to real-time WebSocket streaming to macOS launchd autonomous services. Every project here runs in production or is validated against real data.</p>
 
@@ -265,8 +273,9 @@ footer p{font-size:11px;color:var(--text3)}
       <span class="about-tag">A/B Testing</span><span class="about-tag">Feature Engineering</span><span class="about-tag">ETL Pipelines</span>
     </div>
     <div class="about-links">
-      <a href="https://github.com/CherishChenCherish" target="_blank" class="btn-p">GitHub</a>
-      <a href="mailto:xinlong.chen@yale.edu" class="btn-s">xinlong.chen@yale.edu</a>
+      <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank" class="btn-p">LinkedIn</a>
+      <a href="https://github.com/CherishChenCherish" target="_blank" class="btn-s">GitHub</a>
+      <a href="mailto:xinlong.chen@yale.edu" class="btn-s">Email</a>
     </div>
   </div>
 </section>
@@ -361,6 +370,7 @@ Frontend: token-by-token streaming display</div>
     </ul>
     <h2>Tech Stack</h2>
     <p>Python, FastAPI, WebSocket, faster-whisper, Ollama (gemma3:4b), sounddevice, HMAC-SHA256 license system</p>
+    <div style="margin-top:24px"><a href="https://github.com/CherishChenCherish/live-assistant" target="_blank" class="btn-p" style="padding:10px 24px;border-radius:100px;font-size:12px;text-decoration:none;display:inline-block">View Source on GitHub</a></div>
   </div>
 </div>
 
@@ -405,7 +415,10 @@ AI Client (Ollama or OpenAI &#8212; configurable)</div>
   </div>
 </div>
 
-<footer><p>Built by Cherish Chen &middot; 2026</p></footer>
+<footer>
+  <p style="margin-bottom:8px"><a href="mailto:xinlong.chen@yale.edu" style="color:var(--text2);text-decoration:none">xinlong.chen@yale.edu</a> &middot; <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank" style="color:var(--text2);text-decoration:none">LinkedIn</a> &middot; <a href="https://github.com/CherishChenCherish" target="_blank" style="color:var(--text2);text-decoration:none">GitHub</a></p>
+  <p>Cherish Chen &middot; Yale &rsquo;27 &middot; Open to 2026 summer opportunities</p>
+</footer>
 
 <script>
 function openDetail(id){
