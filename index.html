@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cherish Chen — Projects</title>
+<meta name="description" content="Engineering portfolio by Cherish Chen — Gold Monitor (live trading signals), Live Assistant (AI interview coach), and AI-PM (project management). Yale SOM MBA, AI/ML Engineer.">
+<meta property="og:title" content="Cherish Chen — Projects">
+<meta property="og:description" content="Three production systems spanning real-time AI, quantitative finance, and project management — built end-to-end.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cherishchencherish.github.io/cherish-projects/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>C</text></svg>">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
@@ -348,7 +354,7 @@
   <div class="nav-logo">Cherish Chen</div>
   <div class="nav-links">
     <a href="#" onclick="showHome()">Projects</a>
-    <a href="#about">About</a>
+    <a href="javascript:void(0)" onclick="showHome();setTimeout(()=>document.getElementById('about').scrollIntoView({behavior:'smooth'}),100)">About</a>
     <a href="https://github.com/CherishChenCherish" target="_blank">GitHub</a>
   </div>
 </nav>
@@ -370,7 +376,7 @@
   <div class="projects">
 
     <!-- Gold Monitor -->
-    <a class="project-card" onclick="showDetail('gold')">
+    <a href="javascript:void(0)" class="project-card" onclick="showDetail('gold')">
       <div class="card-visual theme-gold">
         <div class="glow"></div>
         <div class="icon-box">&#x1F4B0;</div>
@@ -391,7 +397,7 @@
     </a>
 
     <!-- Live Assistant -->
-    <a class="project-card" onclick="showDetail('live')">
+    <a href="javascript:void(0)" class="project-card" onclick="showDetail('live')">
       <div class="card-visual theme-blue">
         <div class="glow"></div>
         <div class="icon-box">&#x1F399;</div>
@@ -412,7 +418,7 @@
     </a>
 
     <!-- AI-PM -->
-    <a class="project-card" onclick="showDetail('aipm')">
+    <a href="javascript:void(0)" class="project-card" onclick="showDetail('aipm')">
       <div class="card-visual theme-purple">
         <div class="glow"></div>
         <div class="icon-box">&#x1F4CB;</div>
@@ -451,7 +457,7 @@
 
 <!-- ===== DETAIL: GOLD MONITOR ===== -->
 <div class="detail-page" id="detail-gold">
-  <a class="detail-back" onclick="showHome()">&larr; Back to Projects</a>
+  <a href="javascript:void(0)" class="detail-back" onclick="showHome()">&larr; Back to Projects</a>
   <div class="detail-header">
     <div class="detail-icon" style="background:rgba(255,214,10,0.12)">&#x1F4B0;</div>
     <div>
@@ -516,7 +522,7 @@ gold_web.py &rarr; Real-time dashboard (WebSocket)</div>
 
 <!-- ===== DETAIL: LIVE ASSISTANT ===== -->
 <div class="detail-page" id="detail-live">
-  <a class="detail-back" onclick="showHome()">&larr; Back to Projects</a>
+  <a href="javascript:void(0)" class="detail-back" onclick="showHome()">&larr; Back to Projects</a>
   <div class="detail-header">
     <div class="detail-icon" style="background:rgba(10,132,255,0.12)">&#x1F399;</div>
     <div>
@@ -588,7 +594,7 @@ Frontend: streaming text display + card persistence</div>
 
 <!-- ===== DETAIL: AI-PM ===== -->
 <div class="detail-page" id="detail-aipm">
-  <a class="detail-back" onclick="showHome()">&larr; Back to Projects</a>
+  <a href="javascript:void(0)" class="detail-back" onclick="showHome()">&larr; Back to Projects</a>
   <div class="detail-header">
     <div class="detail-icon" style="background:rgba(191,90,242,0.12)">&#x1F4CB;</div>
     <div>
@@ -654,7 +660,7 @@ AI Client (Ollama or OpenAI — configurable)</div>
 </div>
 
 <footer>
-  Built by Cherish Chen &middot; 2025
+  Built by Cherish Chen &middot; 2026
 </footer>
 
 <script>
