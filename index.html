@@ -209,10 +209,8 @@ footer p{font-size:11px;color:var(--text3)}
     </a>
 
     <a href="javascript:void(0)" class="card" onclick="openDetail('live')">
-      <div class="card-vis">
-        <div class="bg blue-bg"></div>
-        <div class="rings"></div><div class="rings"></div><div class="rings"></div>
-        <div class="ico blue-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#0a84ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/><path d="M8 22h8"/><path d="M2 10h2"/><path d="M20 10h2"/><path d="M7 3l1 2"/><path d="M16 3l1 2" opacity=".4"/></svg></div>
+      <div class="card-vis" style="padding:0;overflow:hidden">
+        <img src="live-assistant-preview.gif" alt="Live Assistant Demo" style="width:100%;height:100%;object-fit:cover;opacity:.85">
       </div>
       <div class="card-info">
         <div class="badge badge-beta"><span class="badge-dot"></span>Beta</div>
@@ -356,6 +354,11 @@ gold_web.py &#8594; Real-time WebSocket dashboard</div>
   <div class="d-head"><div class="d-ico blue-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#0a84ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/><path d="M8 22h8"/></svg></div><h1>Live Assistant</h1></div>
   <div class="d-meta"><div class="badge badge-beta"><span class="badge-dot"></span>Beta &mdash; Core complete</div></div>
   <div class="d-body">
+    <div style="border-radius:12px;overflow:hidden;margin-bottom:24px;border:1px solid var(--border)">
+      <video autoplay loop muted playsinline style="width:100%;display:block">
+        <source src="live-assistant-demo.mp4" type="video/mp4">
+      </video>
+    </div>
     <h2>Overview</h2>
     <p>A real-time AI interview coach. Listens to your interview via microphone, automatically detects when the interviewer asks a question, and streams a suggested answer to your screen &mdash; all in under 8 seconds from question to first visible token.</p>
     <p style="margin-top:10px">Draws on NLP research experience: built a Sentence-BERT + GPT Chrome extension classifying 8K+ comments as a Research Assistant, and integrated toxicity detection across 100K+ LLM interactions (35% toxic content reduction). Pattern-matching and streaming architecture informed by production pipeline work at <strong>Alibaba</strong> (50-100 GB/day).</p>
