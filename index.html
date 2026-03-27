@@ -194,10 +194,8 @@ footer p{font-size:11px;color:var(--text3)}
 
     <!-- 1. JobPilot — Live SaaS -->
     <a href="javascript:void(0)" class="card" onclick="openDetail('jobpilot')">
-      <div class="card-vis">
-        <div class="bg" style="background:linear-gradient(135deg,rgba(48,209,88,.06),rgba(100,210,255,.04))"></div>
-        <div class="rings"></div><div class="rings"></div><div class="rings"></div>
-        <div class="ico" style="background:rgba(48,209,88,.1)"><svg viewBox="0 0 24 24" fill="none" stroke="#30d158" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+      <div class="card-vis" style="padding:0;overflow:hidden">
+        <img src="jobpilot-preview.gif" alt="JobPilot Demo" loading="lazy" style="width:100%;height:100%;object-fit:cover;opacity:.85">
       </div>
       <div class="card-info">
         <div class="badge badge-live"><span class="badge-dot"></span>Live Product</div>
@@ -430,6 +428,11 @@ Frontend: token-by-token streaming display</div>
   <div class="d-head"><div class="d-ico" style="background:rgba(48,209,88,.1)"><svg viewBox="0 0 24 24" fill="none" stroke="#30d158" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h1>JobPilot</h1></div>
   <div class="d-meta"><div class="badge badge-live"><span class="badge-dot"></span>Live &mdash; Deployed on Railway + Vercel</div></div>
   <div class="d-body">
+    <div style="border-radius:12px;overflow:hidden;margin-bottom:24px;border:1px solid var(--border)">
+      <video autoplay loop muted playsinline style="width:100%;display:block">
+        <source src="jobpilot-demo.mp4" type="video/mp4">
+      </video>
+    </div>
     <h2>Overview</h2>
     <p>Most job boards are graveyards of ghost postings. JobPilot solves this: upload your resume, and the system searches 50+ curated companies via Greenhouse &amp; Lever APIs, verifies every posting is actually open (not a ghost job), then generates tailored cover letters using Claude &mdash; all in one pipeline.</p>
     <p style="margin-top:10px">Deployed as a production SaaS with Google OAuth, Stripe subscription billing, and a daily refresh daemon that re-verifies cached jobs. Built to solve a real pain point during the 2026 job market.</p>
