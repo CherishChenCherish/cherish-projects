@@ -192,41 +192,7 @@ footer p{font-size:11px;color:var(--text3)}
   <div class="sec-title">What I've Built</div>
   <div class="cards">
 
-    <a href="javascript:void(0)" class="card" onclick="openDetail('gold')">
-      <div class="card-vis" style="padding:0;overflow:hidden">
-        <img src="gold-monitor-preview.gif" alt="Gold Monitor Demo" loading="lazy" style="width:100%;height:100%;object-fit:cover;opacity:.85">
-      </div>
-      <div class="card-info">
-        <div class="badge badge-live"><span class="badge-dot"></span>Live &mdash; 24/7</div>
-        <h3>Gold Monitor</h3>
-        <div class="oneliner">Autonomous XAUUSD trading signal system with backtested multi-factor scoring</div>
-        <div class="desc">Real-time price monitoring, 5-factor technical scoring (RSI, MACD, volume, Bollinger, multi-TF alignment), ATR-based risk management with 2:1 R:R enforcement, and mobile push alerts via Bark. Runs via macOS launchd.</div>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">WebSocket</span><span class="tag">Technical Analysis</span><span class="tag">Bark Push</span><span class="tag">launchd</span>
-        </div>
-        <div class="arrow">View architecture &amp; details &rarr;</div>
-      </div>
-    </a>
-
-    <a href="javascript:void(0)" class="card" onclick="openDetail('live')">
-      <div class="card-vis" style="padding:0;overflow:hidden">
-        <img src="live-assistant-preview.gif" alt="Live Assistant Demo" loading="lazy" style="width:100%;height:100%;object-fit:cover;opacity:.85">
-      </div>
-      <div class="card-info">
-        <div class="badge badge-beta"><span class="badge-dot"></span>Beta</div>
-        <h3>Live Assistant</h3>
-        <div class="oneliner">Real-time AI interview coach with streaming answers in under 8 seconds</div>
-        <div class="desc">Listens via Whisper, detects interview questions with 45+ pattern matchers + LLM verification, and streams context-aware answers through Ollama. Apple-inspired dark UI with cursor-pulse streaming animation.</div>
-        <div class="tags">
-          <span class="tag">Whisper</span><span class="tag">Ollama</span><span class="tag">FastAPI</span><span class="tag">WebSocket Streaming</span><span class="tag">HMAC License</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;margin-top:18px">
-          <span class="arrow" style="margin:0">View details &rarr;</span>
-          <span onclick="event.stopPropagation();window.open('https://github.com/CherishChenCherish/live-assistant','_blank')" style="font-size:10px;color:var(--text3);border:1px solid var(--border);padding:3px 9px;border-radius:100px;cursor:pointer">Source Code</span>
-        </div>
-      </div>
-    </a>
-
+    <!-- 1. JobPilot — Live SaaS -->
     <a href="javascript:void(0)" class="card" onclick="openDetail('jobpilot')">
       <div class="card-vis">
         <div class="bg" style="background:linear-gradient(135deg,rgba(48,209,88,.06),rgba(100,210,255,.04))"></div>
@@ -243,7 +209,45 @@ footer p{font-size:11px;color:var(--text3)}
         </div>
         <div style="display:flex;align-items:center;gap:12px;margin-top:18px">
           <span class="arrow" style="margin:0">View details &rarr;</span>
-          <span onclick="event.stopPropagation();window.open('https://github.com/CherishChenCherish/jobpilot','_blank')" style="font-size:10px;color:var(--text3);border:1px solid var(--border);padding:3px 9px;border-radius:100px;cursor:pointer">Source Code</span>
+          <span onclick="event.stopPropagation();window.open('https://jobpilot-plum.vercel.app','_blank')" style="font-size:10px;color:var(--green);border:1px solid rgba(48,209,88,.2);padding:3px 9px;border-radius:100px;cursor:pointer;background:rgba(48,209,88,.06)">Live Demo</span>
+          <span onclick="event.stopPropagation();window.open('https://github.com/CherishChenCherish/jobpilot','_blank')" style="font-size:10px;color:var(--text3);border:1px solid var(--border);padding:3px 9px;border-radius:100px;cursor:pointer">Source</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- 2. Gold Monitor -->
+    <a href="javascript:void(0)" class="card" onclick="openDetail('gold')">
+      <div class="card-vis" style="padding:0;overflow:hidden">
+        <img src="gold-monitor-preview.gif" alt="Gold Monitor Demo" loading="lazy" style="width:100%;height:100%;object-fit:cover;opacity:.85">
+      </div>
+      <div class="card-info">
+        <div class="badge badge-live"><span class="badge-dot"></span>Live &mdash; 24/7</div>
+        <h3>Gold Monitor</h3>
+        <div class="oneliner">Autonomous XAUUSD trading signal system with backtested multi-factor scoring</div>
+        <div class="desc">Real-time price monitoring, 5-factor technical scoring (RSI, MACD, volume, Bollinger, multi-TF alignment), ATR-based risk management with 2:1 R:R enforcement, and mobile push alerts via Bark. Runs via macOS launchd.</div>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">WebSocket</span><span class="tag">Technical Analysis</span><span class="tag">Bark Push</span><span class="tag">launchd</span>
+        </div>
+        <div class="arrow">View architecture &amp; details &rarr;</div>
+      </div>
+    </a>
+
+    <!-- 3. Live Assistant -->
+    <a href="javascript:void(0)" class="card" onclick="openDetail('live')">
+      <div class="card-vis" style="padding:0;overflow:hidden">
+        <img src="live-assistant-preview.gif" alt="Live Assistant Demo" loading="lazy" style="width:100%;height:100%;object-fit:cover;opacity:.85">
+      </div>
+      <div class="card-info">
+        <div class="badge badge-beta"><span class="badge-dot"></span>Beta</div>
+        <h3>Live Assistant</h3>
+        <div class="oneliner">Real-time AI interview coach with streaming answers in under 8 seconds</div>
+        <div class="desc">Listens via Whisper, detects interview questions with 45+ pattern matchers + LLM verification, and streams context-aware answers through Ollama. Apple-inspired dark UI with cursor-pulse streaming animation.</div>
+        <div class="tags">
+          <span class="tag">Whisper</span><span class="tag">Ollama</span><span class="tag">FastAPI</span><span class="tag">WebSocket Streaming</span><span class="tag">HMAC License</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;margin-top:18px">
+          <span class="arrow" style="margin:0">View details &rarr;</span>
+          <span onclick="event.stopPropagation();window.open('https://github.com/CherishChenCherish/live-assistant','_blank')" style="font-size:10px;color:var(--text3);border:1px solid var(--border);padding:3px 9px;border-radius:100px;cursor:pointer">Source Code</span>
         </div>
       </div>
     </a>
@@ -473,7 +477,10 @@ Next.js 14 frontend &#8594; Google OAuth + Stripe + Dashboard</div>
     <h2>Tech Stack</h2>
     <p>Next.js 14, TypeScript, Tailwind CSS, Flask, SQLAlchemy, PostgreSQL, Claude API (Anthropic), Stripe, Google OAuth (NextAuth), Railway, Vercel, PyMuPDF</p>
 
-    <div style="margin-top:24px"><span onclick="window.open('https://github.com/CherishChenCherish/jobpilot','_blank')" class="btn-p" style="padding:10px 24px;border-radius:100px;font-size:12px;cursor:pointer;display:inline-block">View Source on GitHub</span></div>
+    <div style="margin-top:24px;display:flex;gap:10px;flex-wrap:wrap">
+      <span onclick="window.open('https://jobpilot-plum.vercel.app','_blank')" class="btn-p" style="padding:10px 24px;border-radius:100px;font-size:12px;cursor:pointer;display:inline-block">Try JobPilot Live</span>
+      <span onclick="window.open('https://github.com/CherishChenCherish/jobpilot','_blank')" class="btn-s" style="padding:10px 24px;border-radius:100px;font-size:12px;cursor:pointer;display:inline-block;border:1px solid var(--border2);color:var(--text2)">Source Code</span>
+    </div>
   </div>
 </div>
 

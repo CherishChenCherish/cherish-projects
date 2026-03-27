@@ -324,6 +324,19 @@ footer .f-sub{font-size:11px;color:var(--text3)}
   <div class="sec-label">Projects</div>
   <div class="sec-title anim">项目经历</div>
   <div class="proj-grid">
+    <!-- 1. JobPilot -->
+    <div class="proj-card anim">
+      <div class="proj-badge b-live"><span class="b-dot"></span>已上线</div>
+      <h3>JobPilot</h3>
+      <div class="proj-sub">AI求职引擎 — 验证岗位真实性 + 生成定制求职信</div>
+      <p>上传简历，系统通过Greenhouse/Lever API搜索50+顶级公司，每个岗位验证是否仍在招聘（消灭ghost job），Claude自动生成针对性求职信。Google OAuth + Stripe订阅 + Railway部署。</p>
+      <div class="proj-tags"><span>Next.js 14</span><span>Flask</span><span>Claude API</span><span>Stripe</span><span>PostgreSQL</span></div>
+      <div style="display:flex;gap:8px;margin-top:12px">
+        <a href="https://jobpilot-plum.vercel.app" target="_blank" class="proj-link" style="background:var(--forest-dim);border:1px solid rgba(74,124,89,.2);padding:3px 10px;border-radius:100px;color:var(--forest)">在线体验 →</a>
+        <a href="https://github.com/CherishChenCherish/jobpilot" target="_blank" class="proj-link" style="padding:3px 10px;border:1px solid var(--border);border-radius:100px">源代码 →</a>
+      </div>
+    </div>
+    <!-- 2. Gold Monitor -->
     <div class="proj-card anim">
       <div style="border-radius:12px;overflow:hidden;margin-bottom:14px;border:1px solid var(--border)">
         <img src="gold-monitor-preview.gif" loading="lazy" alt="Gold Monitor Demo" style="width:100%;display:block">
@@ -334,6 +347,7 @@ footer .f-sub{font-size:11px;color:var(--text3)}
       <p>7×24小时自主运行。5因子技术评分（RSI/MACD/布林/成交量/多周期），ATR动态止损，2:1风险回报比，Bark手机推送。macOS launchd开机自启，全自动运行。</p>
       <div class="proj-tags"><span>Python</span><span>FastAPI</span><span>WebSocket</span><span>技术分析</span><span>Bark</span></div>
     </div>
+    <!-- 3. Live Assistant -->
     <div class="proj-card anim">
       <div style="border-radius:12px;overflow:hidden;margin-bottom:14px;border:1px solid var(--border)">
         <img src="live-assistant-preview.gif" loading="lazy" alt="Live Assistant Demo" style="width:100%;display:block">
@@ -345,14 +359,7 @@ footer .f-sub{font-size:11px;color:var(--text3)}
       <div class="proj-tags"><span>Whisper</span><span>Ollama</span><span>FastAPI</span><span>流式推理</span></div>
       <a href="https://github.com/CherishChenCherish/live-assistant" target="_blank" class="proj-link">查看源码 →</a>
     </div>
-    <div class="proj-card anim">
-      <div class="proj-badge b-live"><span class="b-dot"></span>已上线</div>
-      <h3>JobPilot</h3>
-      <div class="proj-sub">AI求职引擎 — 验证岗位真实性 + 生成定制求职信</div>
-      <p>上传简历，系统通过Greenhouse/Lever API搜索50+顶级公司，每个岗位验证是否仍在招聘（消灭ghost job），Claude自动生成针对性求职信。Google OAuth + Stripe订阅 + Railway部署。</p>
-      <div class="proj-tags"><span>Next.js 14</span><span>Flask</span><span>Claude API</span><span>Stripe</span><span>PostgreSQL</span></div>
-      <a href="https://github.com/CherishChenCherish/jobpilot" target="_blank" class="proj-link">源代码 →</a>
-    </div>
+    <!-- 4. AI-PM -->
     <div class="proj-card anim">
       <div class="proj-badge b-dev"><span class="b-dot"></span>开发中</div>
       <h3>AI-PM</h3>
