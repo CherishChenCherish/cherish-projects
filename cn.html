@@ -116,7 +116,8 @@ section{padding:80px 40px}
 .num{color:var(--terra);font-weight:700}
 
 /* PROJECTS */
-.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:960px}
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:960px}
+.proj-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:960px}
 .proj-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:26px;box-shadow:var(--warm-shadow);transition:all .4s}
 .proj-card:hover{box-shadow:var(--warm-shadow-lg);transform:translateY(-3px)}
 .proj-badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;padding:4px 11px;border-radius:100px;margin-bottom:12px;letter-spacing:.3px}
@@ -194,6 +195,7 @@ footer .f-sub{font-size:11px;color:var(--text3)}
   .exp-left{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
   .exp-company{font-size:16px}
   .proj-grid{grid-template-columns:1fr}
+  .proj-grid-3{grid-template-columns:1fr}
   .award-row{flex-direction:column;gap:12px}
   .award-card{min-width:auto}
   .creator-block{flex-direction:column;text-align:center;padding:28px}
@@ -344,6 +346,14 @@ footer .f-sub{font-size:11px;color:var(--text3)}
       <a href="https://github.com/CherishChenCherish/live-assistant" target="_blank" class="proj-link">查看源码 →</a>
     </div>
     <div class="proj-card anim">
+      <div class="proj-badge b-live"><span class="b-dot"></span>已上线</div>
+      <h3>JobPilot</h3>
+      <div class="proj-sub">AI求职引擎 — 验证岗位真实性 + 生成定制求职信</div>
+      <p>上传简历，系统通过Greenhouse/Lever API搜索50+顶级公司，每个岗位验证是否仍在招聘（消灭ghost job），Claude自动生成针对性求职信。Google OAuth + Stripe订阅 + Railway部署。</p>
+      <div class="proj-tags"><span>Next.js 14</span><span>Flask</span><span>Claude API</span><span>Stripe</span><span>PostgreSQL</span></div>
+      <a href="https://github.com/CherishChenCherish/jobpilot" target="_blank" class="proj-link">源代码 →</a>
+    </div>
+    <div class="proj-card anim">
       <div class="proj-badge b-dev"><span class="b-dot"></span>开发中</div>
       <h3>AI-PM</h3>
       <div class="proj-sub">AI原生项目管理</div>
@@ -351,7 +361,7 @@ footer .f-sub{font-size:11px;color:var(--text3)}
       <div class="proj-tags"><span>React</span><span>FastAPI</span><span>SQLite</span><span>Ollama</span></div>
     </div>
   </div>
-  <div class="proj-grid" style="margin-top:16px;max-width:960px">
+  <div class="proj-grid-3" style="margin-top:16px;max-width:960px">
     <div class="proj-card anim">
       <h3>实时欺诈检测</h3>
       <div class="proj-sub">端到端ML部署</div>

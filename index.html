@@ -227,6 +227,27 @@ footer p{font-size:11px;color:var(--text3)}
       </div>
     </a>
 
+    <a href="javascript:void(0)" class="card" onclick="openDetail('jobpilot')">
+      <div class="card-vis">
+        <div class="bg" style="background:linear-gradient(135deg,rgba(48,209,88,.06),rgba(100,210,255,.04))"></div>
+        <div class="rings"></div><div class="rings"></div><div class="rings"></div>
+        <div class="ico" style="background:rgba(48,209,88,.1)"><svg viewBox="0 0 24 24" fill="none" stroke="#30d158" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+      </div>
+      <div class="card-info">
+        <div class="badge badge-live"><span class="badge-dot"></span>Live Product</div>
+        <h3>JobPilot</h3>
+        <div class="oneliner">AI job search engine that verifies postings are actually open, then writes your cover letters</div>
+        <div class="desc">Upload your resume, get matched jobs from Greenhouse &amp; Lever APIs across 50+ top companies, every posting verified against ghost jobs, then Claude generates tailored cover letters. Google OAuth, Stripe billing, Railway + Vercel deployment.</div>
+        <div class="tags">
+          <span class="tag">Next.js 14</span><span class="tag">Flask</span><span class="tag">Claude API</span><span class="tag">Stripe</span><span class="tag">Google OAuth</span><span class="tag">PostgreSQL</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;margin-top:18px">
+          <span class="arrow" style="margin:0">View details &rarr;</span>
+          <span onclick="event.stopPropagation();window.open('https://github.com/CherishChenCherish/jobpilot','_blank')" style="font-size:10px;color:var(--text3);border:1px solid var(--border);padding:3px 9px;border-radius:100px;cursor:pointer">Source Code</span>
+        </div>
+      </div>
+    </a>
+
     <a href="javascript:void(0)" class="card" onclick="openDetail('aipm')">
       <div class="card-vis">
         <div class="bg purp-bg"></div>
@@ -397,6 +418,62 @@ Frontend: token-by-token streaming display</div>
     <h2>Tech Stack</h2>
     <p>Python, FastAPI, WebSocket, faster-whisper, Ollama (gemma3:4b), sounddevice, HMAC-SHA256 license system</p>
     <div style="margin-top:24px"><a href="https://github.com/CherishChenCherish/live-assistant" target="_blank" class="btn-p" style="padding:10px 24px;border-radius:100px;font-size:12px;text-decoration:none;display:inline-block">View Source on GitHub</a></div>
+  </div>
+</div>
+
+<!-- DETAIL: JOBPILOT -->
+<div class="detail" id="d-jobpilot">
+  <span class="back" onclick="goHome()">&larr; All Projects</span>
+  <div class="d-head"><div class="d-ico" style="background:rgba(48,209,88,.1)"><svg viewBox="0 0 24 24" fill="none" stroke="#30d158" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h1>JobPilot</h1></div>
+  <div class="d-meta"><div class="badge badge-live"><span class="badge-dot"></span>Live &mdash; Deployed on Railway + Vercel</div></div>
+  <div class="d-body">
+    <h2>Overview</h2>
+    <p>Most job boards are graveyards of ghost postings. JobPilot solves this: upload your resume, and the system searches 50+ curated companies via Greenhouse &amp; Lever APIs, verifies every posting is actually open (not a ghost job), then generates tailored cover letters using Claude &mdash; all in one pipeline.</p>
+    <p style="margin-top:10px">Deployed as a production SaaS with Google OAuth, Stripe subscription billing, and a daily refresh daemon that re-verifies cached jobs. Built to solve a real pain point during the 2026 job market.</p>
+
+    <h2>Architecture</h2>
+    <div class="arch">Resume (PDF) &#8594; parser.py (PyMuPDF + Claude extraction)
+  &#8595;
+searcher.py &#8594; Greenhouse &amp; Lever APIs (50+ companies)
+  &#9474;  Profile-aware query building
+  &#9474;  Degree-strict filtering (no PhD-only for MS)
+  &#9474;  Category-tagged company matching
+  &#8595;
+verifier.py &#8594; Paranoid verification pipeline
+  &#9474;  1. ATS API check (100% definitive)
+  &#9474;  2. HTML signal analysis (closed/open/ambiguous)
+  &#9474;  3. Ghost job detection (age &gt; 60 days = suspect)
+  &#9474;  Philosophy: honest "unverified" &gt; wrong "open"
+  &#8595;
+generator.py &#8594; Claude-powered cover letters
+  &#9474;  Tone mapping: startup/consulting/research
+  &#9474;  Banned hollow phrases (89% of AI CLs fail this)
+  &#9474;  Problem-Solution format (49% more interviews)
+  &#8595;
+exporter.py &#8594; 4-sheet styled Excel export
+  &#8595;
+Next.js 14 frontend &#8594; Google OAuth + Stripe + Dashboard</div>
+
+    <h2>What Makes It Different</h2>
+    <div class="fgrid">
+      <div class="fitem"><h4>Ghost Job Killer</h4><p>Every posting verified against real ATS APIs. "Unverified" when ambiguous &mdash; never lies about open status. Daily re-verification daemon purges stale jobs.</p></div>
+      <div class="fitem"><h4>Profile-Aware Search</h4><p>Queries built from YOUR resume, not generic templates. Degree filtering, career stage separation (intern vs new grad), and category-tagged company matching.</p></div>
+      <div class="fitem"><h4>Human Cover Letters</h4><p>Claude generates letters that sound like a person, not a template. Bans 20+ hollow phrases ("passionate about", "fast learner"). Tone adapts to company culture.</p></div>
+      <div class="fitem"><h4>Production SaaS</h4><p>Google OAuth, Stripe billing ($12/mo Pro), rate limiting, PostgreSQL, Railway backend, Vercel frontend. Real users, real payments.</p></div>
+    </div>
+
+    <h2>Key Technical Decisions</h2>
+    <ul>
+      <li><span class="hl">Verification philosophy:</span> "An honest unverified beats a wrong open." ATS API first (definitive), HTML signals second, ghost detection by posting age</li>
+      <li><span class="hl">Company registry:</span> 50+ curated companies with category tags (DS/ML, Health Informatics, SWE, PM) &mdash; not scraping LinkedIn</li>
+      <li><span class="hl">Cover letter quality:</span> Based on analysis of 80+ studies &mdash; Problem-Solution format, 49% more interviews, 72% of recruiters prioritize customization</li>
+      <li><span class="hl">Daily refresh daemon:</span> Re-verifies all cached jobs automatically, removes closed postings before users see them</li>
+    </ul>
+
+    <h2>Tech Stack</h2>
+    <p>Next.js 14, TypeScript, Tailwind CSS, Flask, SQLAlchemy, PostgreSQL, Claude API (Anthropic), Stripe, Google OAuth (NextAuth), Railway, Vercel, PyMuPDF</p>
+
+    <div style="margin-top:24px"><span onclick="window.open('https://github.com/CherishChenCherish/jobpilot','_blank')" class="btn-p" style="padding:10px 24px;border-radius:100px;font-size:12px;cursor:pointer;display:inline-block">View Source on GitHub</span></div>
   </div>
 </div>
 
