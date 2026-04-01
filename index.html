@@ -143,6 +143,7 @@ footer p{font-size:11px;color:var(--text3)}
   .fgrid{grid-template-columns:1fr}
   .d-head h1{font-size:26px}
   .hero-photo{width:110px;height:110px}
+  .vp-grid{grid-template-columns:1fr !important}
 }
 @media(max-width:390px){
   .hero h1{font-size:32px}
@@ -163,7 +164,7 @@ footer p{font-size:11px;color:var(--text3)}
     <a href="https://github.com/CherishChenCherish" target="_blank">GitHub</a>
     <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank">LinkedIn</a>
     <a href="cn.html" style="font-size:11px;color:var(--text3);border:1px solid var(--border);padding:4px 10px;border-radius:100px">中文</a>
-    <a href="mailto:xinlong.chen@yale.edu" class="nav-cta">Get in Touch</a>
+    <a href="mailto:xinlong.chen@yale.edu" class="nav-cta">Let's Talk &rarr;</a>
   </div>
 </nav>
 
@@ -171,26 +172,81 @@ footer p{font-size:11px;color:var(--text3)}
 
 <section class="hero">
   <div class="hero-photo"><img src="photo.jpg" alt="Cherish Chen"></div>
-  <div class="hero-sub">ML Engineer &middot; Data Scientist &middot; Full-Stack Builder</div>
+  <div class="hero-sub">I don't just build models &mdash; I ship production systems.</div>
   <h1>Cherish Chen</h1>
-  <p class="hero-desc">Yale M.S. &rsquo;27 &middot; Ex-Alibaba &middot; Kaggle Top 5%<br>I build production AI systems &mdash; from 100 GB/day data pipelines to real-time streaming inference. Currently seeking 2026 summer internships in ML engineering, data science, and applied AI.</p>
+  <p class="hero-desc">Yale M.S. &rsquo;27 &middot; Ex-Alibaba &middot; Kaggle Top 5%<br>From 100 GB/day data pipelines at Alibaba to autonomous trading signals running 24/7 &mdash; I build AI systems that work in the real world, not just in notebooks.</p>
   <div class="hero-stats">
     <div class="stat"><div class="stat-n green">24/7</div><div class="stat-l">Live Production System</div></div>
     <div class="stat"><div class="stat-n blue">Top 5%</div><div class="stat-l">Kaggle / 11K+</div></div>
     <div class="stat"><div class="stat-n gold">100GB</div><div class="stat-l">Daily Pipeline</div></div>
-    <div class="stat"><div class="stat-n" style="color:var(--purple)">3.86</div><div class="stat-l">GPA / Dean's List</div></div>
+    <div class="stat"><div class="stat-n" style="color:var(--purple)">¥3.94M</div><div class="stat-l">Commercial Cases</div></div>
   </div>
-  <div style="display:flex;gap:12px;justify-content:center;margin-top:36px;opacity:0;animation:fu .7s .7s forwards">
-    <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank" class="btn-p" style="padding:12px 28px;font-size:13px;border-radius:100px;text-decoration:none">LinkedIn</a>
-    <a href="mailto:xinlong.chen@yale.edu" class="btn-s" style="padding:12px 28px;font-size:13px;border-radius:100px;text-decoration:none;border:1px solid var(--border2);color:var(--text2)">xinlong.chen@yale.edu</a>
+  <div style="display:flex;gap:12px;justify-content:center;margin-top:36px;opacity:0;animation:fu .7s .7s forwards;flex-wrap:wrap">
+    <a href="mailto:xinlong.chen@yale.edu" class="btn-p" style="padding:12px 28px;font-size:13px;border-radius:100px;text-decoration:none">Let's Talk &rarr;</a>
+    <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank" class="btn-s" style="padding:12px 28px;font-size:13px;border-radius:100px;text-decoration:none;border:1px solid var(--border2);color:var(--text2)">LinkedIn</a>
   </div>
   <div class="hero-scroll"><span></span></div>
 </section>
 
 <section id="projects">
+  <!-- VALUE PROPOSITION — Social Proof + Authority + Reciprocity -->
+  <div style="max-width:960px;margin:0 auto 80px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center">
+    <div style="padding:28px 20px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.02)">
+      <div style="font-size:28px;font-weight:800;color:var(--gold);margin-bottom:6px">Gold Award Winner</div>
+      <div style="font-size:12px;color:var(--text3);line-height:1.6">BCI neuromarketing startup, CTO & Co-founder. ¥3.94M in commercial cases. 4.21M competing projects.</div>
+    </div>
+    <div style="padding:28px 20px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.02)">
+      <div style="font-size:28px;font-weight:800;color:var(--green);margin-bottom:6px">0 → 1 Builder</div>
+      <div style="font-size:12px;color:var(--text3);line-height:1.6">Multiple shipped products with real users and real revenue. Full-stack, ML pipeline, payments, infra.</div>
+    </div>
+    <div style="padding:28px 20px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.02)">
+      <div style="font-size:28px;font-weight:800;color:var(--blue);margin-bottom:6px">Alibaba → Yale</div>
+      <div style="font-size:12px;color:var(--text3);line-height:1.6">Production engineering at scale meets rigorous ML research. Both worlds, one person.</div>
+    </div>
+  </div>
+
   <div class="sec-label">Projects</div>
   <div class="sec-title">What I've Built</div>
   <div class="cards">
+
+    <!-- 0. BCI Neuromarketing — Gold Award -->
+    <div class="card visible" style="cursor:default;opacity:1;transform:none">
+      <div class="card-vis" style="padding:36px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
+        <div class="bg gold-bg"></div>
+        <div style="display:flex;gap:12px;position:relative;z-index:1">
+          <div style="background:rgba(255,214,10,.1);border:1px solid rgba(255,214,10,.15);border-radius:12px;padding:14px 18px;text-align:center">
+            <div style="font-size:24px;font-weight:800;color:var(--gold)">Gold Award</div>
+            <div style="font-size:10px;color:var(--text3);margin-top:2px">Innovation Competition<br>4.21M projects · 151 countries</div>
+          </div>
+          <div style="background:rgba(48,209,88,.1);border:1px solid rgba(48,209,88,.15);border-radius:12px;padding:14px 18px;text-align:center">
+            <div style="font-size:24px;font-weight:800;color:var(--green)">¥3.94M</div>
+            <div style="font-size:10px;color:var(--text3);margin-top:2px">Completed Cases<br>incl. Haidilao, SOEs</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;position:relative;z-index:1">
+          <div style="background:rgba(10,132,255,.1);border:1px solid rgba(10,132,255,.15);border-radius:12px;padding:10px 16px;text-align:center">
+            <div style="font-size:18px;font-weight:700;color:var(--blue)">23</div>
+            <div style="font-size:9px;color:var(--text3)">Patents (3 PCT in US)</div>
+          </div>
+          <div style="background:rgba(191,90,242,.1);border:1px solid rgba(191,90,242,.15);border-radius:12px;padding:10px 16px;text-align:center">
+            <div style="font-size:18px;font-weight:700;color:var(--purple)">90s</div>
+            <div style="font-size:9px;color:var(--text3)">EEG Collection → Result</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="badge badge-live"><span class="badge-dot"></span>Commercialized · Gold Award</div>
+        <h3>BCI Neuromarketing System</h3>
+        <div class="oneliner">CTO & Co-founder — First commercially viable neuromarketing platform using brain-computer interfaces</div>
+        <div class="desc">Built portable EEG devices + AI-driven neural data platform. 90-second consumer brain signal collection and analysis. Served Haidilao, Foshan Lighting, Zhejiang Tobacco. ¥3.94M in completed cases, ¥1.75M in signed agreements. Endorsed by academician-level advisors.</div>
+        <div class="tags">
+          <span class="tag">BCI</span><span class="tag">Portable EEG</span><span class="tag">ML / Emotion Algo</span><span class="tag">Neuromarketing</span><span class="tag">14 Authorized Patents</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;margin-top:18px">
+          <span onclick="window.open('https://cic.tju.edu.cn/info/1040/4784.htm','_blank')" style="font-size:10px;color:var(--gold);border:1px solid rgba(255,214,10,.2);padding:3px 9px;border-radius:100px;cursor:pointer;background:rgba(255,214,10,.06)">TJU Official Coverage →</span>
+        </div>
+      </div>
+    </div>
 
     <!-- 1. JobPilot — Live SaaS -->
     <a href="javascript:void(0)" class="card" onclick="openDetail('jobpilot')">
@@ -272,12 +328,13 @@ footer p{font-size:11px;color:var(--text3)}
 
 <section id="about">
   <div class="sec-label">About</div>
-  <div class="sec-title">Cherish Chen</div>
+  <div class="sec-title">The Person Behind the Systems</div>
   <div class="about-wrap">
-    <p>M.S. Health Informatics (STEM) at <strong>Yale University</strong> (graduating May 2027), focused on applied ML, clinical NLP, and healthcare data systems. Double major B.S. Informatics: Data Science + B.A. Economics at <strong>University of Washington</strong> &mdash; 3.86 GPA, Dean's List for 10 quarters. Bilingual English/Chinese.</p>
-    <p>Previously: <strong>Data Mining Engineer at Alibaba (Ele.me)</strong> building 50-100 GB/day pharmaceutical analytics pipelines, lifting conversion 15%. <strong>Business Analyst at Gate.io</strong> building RF+RNN ensembles on 50K+ users, driving 14% engagement. <strong>Summer Analyst at Mercer Consulting</strong> delivering C-suite compensation analytics with DBSCAN and neural networks.</p>
-    <p>I build production systems end-to-end &mdash; from XGBoost fraud detection deployed on AWS (&lt;50ms, 0.94 AUPRC) to real-time WebSocket streaming to macOS launchd autonomous services. Every project here runs in production or is validated against real data.</p>
-    <p>Beyond engineering, I create AI technology and travel content across Douyin and Xiaohongshu (10K+ followers), translating complex technical concepts for general audiences &mdash; a skill that directly strengthens how I communicate system design, write documentation, and present to cross-functional teams.</p>
+    <p>Most engineers can build a model. Few can take it from notebook to production, handle payments, manage infrastructure, and keep it running at 3 AM. <strong>I do all of it.</strong></p>
+    <p><strong>Yale University</strong> M.S. Health Informatics (STEM, graduating 2027). <strong>University of Washington</strong> double major in Data Science + Economics &mdash; 3.86 GPA, Dean's List 10 straight quarters. Bilingual English/Chinese.</p>
+    <p>At <strong>Alibaba (Ele.me)</strong>, I built 50-100 GB/day pharmaceutical analytics pipelines that lifted conversion 15%. At <strong>Gate.io</strong>, I built RF+RNN ensembles on 50K+ users that drove 14% engagement. At <strong>Mercer Consulting</strong>, I delivered DBSCAN + neural network compensation analytics directly to C-suite executives.</p>
+    <p>After hours, I build my own products &mdash; a live SaaS with paying users, an autonomous trading system running 24/7, and an AI interview coach. Every project on this page runs in production or is validated on real data. No toy demos.</p>
+    <p style="font-size:13px;color:var(--text3);font-style:italic;border-left:2px solid var(--border2);padding-left:14px;margin-top:20px">"The best way to predict the future is to build it." &mdash; That's not a platitude for me. It's Tuesday.</p>
 
     <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:28px 0 20px">
       <div style="background:rgba(48,209,88,.08);border:1px solid rgba(48,209,88,.15);border-radius:10px;padding:10px 16px;text-align:center;min-width:130px">
@@ -297,8 +354,8 @@ footer p{font-size:11px;color:var(--text3)}
         <div style="font-size:10px;color:var(--text3);margin-top:2px">Pipeline at Alibaba<br>pharma retail data</div>
       </div>
       <div style="background:rgba(255,69,58,.08);border:1px solid rgba(255,69,58,.15);border-radius:10px;padding:10px 16px;text-align:center;min-width:130px">
-        <div style="font-size:18px;font-weight:700;color:var(--red)">10K+</div>
-        <div style="font-size:10px;color:var(--text3);margin-top:2px">Content Followers<br>AI &amp; Travel Creator</div>
+        <div style="font-size:18px;font-weight:700;color:var(--red)">¥3.94M</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">BCI Cases Completed<br>CTO & Co-founder</div>
       </div>
     </div>
 
@@ -527,8 +584,13 @@ AI Client (Ollama or OpenAI &#8212; configurable)</div>
 </div>
 
 <footer>
-  <p style="margin-bottom:8px"><a href="mailto:xinlong.chen@yale.edu" style="color:var(--text2);text-decoration:none">xinlong.chen@yale.edu</a> &middot; <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank" style="color:var(--text2);text-decoration:none">LinkedIn</a> &middot; <a href="https://github.com/CherishChenCherish" target="_blank" style="color:var(--text2);text-decoration:none">GitHub</a></p>
-  <p>Cherish Chen &middot; Yale &rsquo;27 &middot; Open to 2026 summer opportunities</p>
+  <p style="margin-bottom:12px;font-size:14px;color:var(--text2)">Interested in working together? I'm selectively open to the right opportunity.</p>
+  <div style="display:flex;justify-content:center;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+    <a href="mailto:xinlong.chen@yale.edu" style="padding:10px 24px;border-radius:100px;background:var(--blue);color:#fff;font-size:12px;font-weight:600;text-decoration:none;transition:all .3s">Let's Talk &rarr;</a>
+    <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank" style="padding:10px 24px;border-radius:100px;border:1px solid var(--border2);color:var(--text2);font-size:12px;font-weight:600;text-decoration:none">LinkedIn</a>
+    <a href="https://github.com/CherishChenCherish" target="_blank" style="padding:10px 24px;border-radius:100px;border:1px solid var(--border2);color:var(--text2);font-size:12px;font-weight:600;text-decoration:none">GitHub</a>
+  </div>
+  <p style="font-size:11px;color:var(--text3)">Cherish Chen &middot; Yale &rsquo;27 &middot; New Haven, CT</p>
 </footer>
 
 <script>

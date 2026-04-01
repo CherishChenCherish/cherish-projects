@@ -196,11 +196,13 @@ footer .f-sub{font-size:11px;color:var(--text3)}
   .exp-company{font-size:16px}
   .proj-grid{grid-template-columns:1fr}
   .proj-grid-3{grid-template-columns:1fr}
+  .proj-card[style*="grid-template-columns"]{grid-template-columns:1fr !important}
   .award-row{flex-direction:column;gap:12px}
   .award-card{min-width:auto}
   .creator-block{flex-direction:column;text-align:center;padding:28px}
   .creator-tags{justify-content:center}
   .sec-title{margin-bottom:32px}
+  .vp-grid-cn{grid-template-columns:1fr !important}
 }
 @media(max-width:390px){
   .hero-name{font-size:34px}
@@ -232,8 +234,8 @@ footer .f-sub{font-size:11px;color:var(--text3)}
     <div class="hero-text">
       <div class="hero-name">陈鑫隆</div>
       <div class="hero-name-en">Cherish (Xinlong) Chen</div>
-      <div class="hero-title">AI/ML工程师 · 数据科学家 · 全栈开发者</div>
-      <p class="hero-desc">从阿里巴巴日处理百GB级数据管道到自主运行的实时AI系统，我构建能在生产环境稳定运行的智能系统。耶鲁大学健康信息学硕士在读，专注机器学习、NLP和实时推理。中英双语流利。</p>
+      <div class="hero-title">不只是做模型 — 我把AI系统送上生产环境</div>
+      <p class="hero-desc">阿里巴巴百GB级数据管道 → 7×24自主运行的量化信号系统 → 有付费用户的SaaS产品。我不写demo，我做能跑的东西。耶鲁硕士在读，中英双语流利。</p>
       <div class="hero-tags">
         <span class="htag htag-yale">耶鲁大学 '27</span>
         <span class="htag htag-ali">前阿里巴巴</span>
@@ -241,11 +243,29 @@ footer .f-sub{font-size:11px;color:var(--text3)}
         <span class="htag htag-award">互联网+金奖</span>
       </div>
       <div class="hero-btns">
-        <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank" class="btn-p">LinkedIn</a>
+        <a href="mailto:xinlong.chen@yale.edu" class="btn-p">聊一聊 &rarr;</a>
+        <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank" class="btn-s">LinkedIn</a>
         <a href="https://github.com/CherishChenCherish" target="_blank" class="btn-s">GitHub</a>
-        <a href="mailto:xinlong.chen@yale.edu" class="btn-s">xinlong.chen@yale.edu</a>
       </div>
-      <div class="hero-status">正在寻找2026暑期实习 — ML工程 / 数据科学 / 应用AI</div>
+      <div class="hero-status">3个已上线产品 · 1个SaaS有付费用户 · 1个系统7×24无人值守运行</div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE PROPOSITION -->
+<section style="padding:60px 40px 20px">
+  <div style="max-width:880px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center">
+    <div class="anim" style="padding:28px 20px;border:1px solid var(--border);border-radius:var(--r);background:var(--card);box-shadow:var(--warm-shadow)">
+      <div style="font-size:26px;font-weight:900;color:var(--terra);margin-bottom:6px">从0到1</div>
+      <div style="font-size:12px;color:var(--text3);line-height:1.6">独立完成从想法到上线的全过程：产品、架构、支付、部署、运维。</div>
+    </div>
+    <div class="anim" style="padding:28px 20px;border:1px solid var(--border);border-radius:var(--r);background:var(--card);box-shadow:var(--warm-shadow)">
+      <div style="font-size:26px;font-weight:900;color:var(--forest);margin-bottom:6px">大厂+学术</div>
+      <div style="font-size:12px;color:var(--text3);line-height:1.6">阿里巴巴的工程能力 + 耶鲁的研究深度。既能扛量，也能创新。</div>
+    </div>
+    <div class="anim" style="padding:28px 20px;border:1px solid var(--border);border-radius:var(--r);background:var(--card);box-shadow:var(--warm-shadow)">
+      <div style="font-size:26px;font-weight:900;color:var(--amber);margin-bottom:6px">不是纸上谈兵</div>
+      <div style="font-size:12px;color:var(--text3);line-height:1.6">每个项目都跑在生产环境，有真用户、真数据、真交易。</div>
     </div>
   </div>
 </section>
@@ -322,8 +342,42 @@ footer .f-sub{font-size:11px;color:var(--text3)}
 <!-- PROJECTS -->
 <section id="proj" class="sec-alt">
   <div class="sec-label">Projects</div>
-  <div class="sec-title anim">项目经历</div>
+  <div class="sec-title anim">项目作品</div>
   <div class="proj-grid">
+    <!-- 0. BCI Neuromarketing -->
+    <div class="proj-card anim" style="grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:32px">
+      <div>
+        <div class="proj-badge b-live"><span class="b-dot"></span>已商业化 · 金奖项目</div>
+        <h3 style="font-size:20px">BCI神经营销系统</h3>
+        <div class="proj-sub">CTO & 联合创始人 · 便携脑电设备 + AI数据服务平台</div>
+        <p>业内首个商业化脑机接口神经营销解决方案。自研便携EEG设备+算法驱动数据平台，90秒完成消费者脑电采集与分析。已服务海底捞、佛山照明、浙江烟草等企业，累计完成<span style="color:var(--terra);font-weight:700">394万元</span>案例，签约意向合同<span style="color:var(--terra);font-weight:700">175万元</span>。</p>
+        <div class="proj-tags"><span>脑机接口</span><span>便携EEG</span><span>机器学习</span><span>情感算法</span><span>神经营销</span><span>14项授权专利</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:center;gap:12px">
+        <div style="display:flex;gap:10px">
+          <div style="flex:1;background:var(--terra-dim);border:1px solid rgba(192,78,44,.15);border-radius:12px;padding:14px;text-align:center">
+            <div style="font-size:22px;font-weight:900;color:var(--terra)">金奖</div>
+            <div style="font-size:10px;color:var(--text3);margin-top:2px">中国国际大学生<br>创新大赛</div>
+          </div>
+          <div style="flex:1;background:var(--forest-dim);border:1px solid rgba(74,124,89,.15);border-radius:12px;padding:14px;text-align:center">
+            <div style="font-size:22px;font-weight:900;color:var(--forest)">421万</div>
+            <div style="font-size:10px;color:var(--text3);margin-top:2px">参赛项目<br>151个国家</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px">
+          <div style="flex:1;background:var(--amber-dim);border:1px solid rgba(201,138,60,.15);border-radius:12px;padding:14px;text-align:center">
+            <div style="font-size:22px;font-weight:900;color:var(--amber)">394万</div>
+            <div style="font-size:10px;color:var(--text3);margin-top:2px">已完成案例<br>含上市公司</div>
+          </div>
+          <div style="flex:1;background:var(--earth-dim);border:1px solid rgba(122,92,62,.15);border-radius:12px;padding:14px;text-align:center">
+            <div style="font-size:22px;font-weight:900;color:var(--earth)">23项</div>
+            <div style="font-size:10px;color:var(--text3);margin-top:2px">专利申请<br>含3项PCT</div>
+          </div>
+        </div>
+        <a href="https://cic.tju.edu.cn/info/1040/4784.htm" target="_blank" class="proj-link" style="margin-top:4px">天津大学官方报道 →</a>
+      </div>
+    </div>
+
     <!-- 1. JobPilot -->
     <div class="proj-card anim">
       <div style="border-radius:12px;overflow:hidden;margin-bottom:14px;border:1px solid var(--border)">
@@ -452,11 +506,24 @@ footer .f-sub{font-size:11px;color:var(--text3)}
   <div class="creator-block anim">
     <div class="creator-num"><span class="n">10K</span><span class="u">+</span></div>
     <div class="creator-text">
-      <h3>全平台技术内容创作者</h3>
-      <p>活跃于抖音和小红书，创作AI技术科普与旅行生活内容。将复杂技术概念转化为大众可理解的表达——这种能力直接体现在系统设计文档、跨团队沟通和技术方案汇报中。</p>
+      <h3>能写代码，也能讲故事</h3>
+      <p>活跃于抖音和小红书，把复杂的AI技术变成普通人能理解的内容。这不是兴趣爱好——是一种稀缺能力：能让技术团队和业务团队说同一种语言。对投资人说人话，对工程师说行话，都游刃有余。</p>
       <div class="creator-tags">
         <span>抖音</span><span>小红书</span><span>AI技术分享</span><span>旅游生活</span><span>3D打印/建模</span><span>技术传播</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY — Narrative Transportation -->
+<section class="sec-alt" style="padding:60px 40px">
+  <div style="max-width:640px;margin:0 auto;text-align:center">
+    <div class="sec-label">Philosophy</div>
+    <div class="sec-title anim" style="margin-bottom:28px">我的工作方式</div>
+    <div class="anim" style="font-size:15px;color:var(--text2);line-height:2">
+      <p style="margin-bottom:16px">大多数人在学校学会建模型，在公司学会写代码。<br><strong style="color:var(--text)">我学会了把两者合在一起，然后发布出去。</strong></p>
+      <p style="margin-bottom:16px">我的每个项目都遵循同一个原则：<strong style="color:var(--terra)">如果没人在用，就不算完成。</strong></p>
+      <p style="font-size:13px;color:var(--text3);font-style:italic;border-left:2px solid var(--border2);padding-left:14px;text-align:left;max-width:400px;margin:24px auto 0">不管是投资、招聘还是合作——你要找的是一个能独立把事情做完的人。我就是。</p>
     </div>
   </div>
 </section>
@@ -467,7 +534,8 @@ footer .f-sub{font-size:11px;color:var(--text3)}
     <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank">LinkedIn</a>
     <a href="https://github.com/CherishChenCherish" target="_blank">GitHub</a>
   </div>
-  <div class="f-sub">陈鑫隆 · 耶鲁大学 '27 · 正在寻找2026暑期实习机会</div>
+  <div style="margin:12px 0"><a href="mailto:xinlong.chen@yale.edu" style="padding:10px 24px;border-radius:100px;background:var(--terra);color:#fff;font-size:12px;font-weight:600;text-decoration:none;transition:all .3s;display:inline-block">有想法？聊一聊 &rarr;</a></div>
+  <div class="f-sub">陈鑫隆 · 耶鲁大学 '27 · 选择性地对合适的机会开放</div>
 </footer>
 
 <script>
