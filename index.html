@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cherish Chen — Engineering Portfolio</title>
-<meta name="description" content="Engineering portfolio by Cherish Chen. AI/ML Engineer + Yale MBA. Building production systems in real-time AI, quantitative finance, and developer tools.">
+<title>Cherish Chen — AI Engineering Portfolio</title>
+<meta name="description" content="Cherish (Xinlong) Chen, Yale M.S. Health Informatics '27. Tech lead at Suiqi AI building Data Agents and multi-agent systems; former data mining intern at Ele.me (Alibaba).">
 <meta property="og:title" content="Cherish Chen — Engineering Portfolio">
-<meta property="og:description" content="Three production systems: real-time trading signals, AI interview coach, and AI-native project management.">
+<meta property="og:description" content="Yale '27 · Tech lead at Suiqi AI · Ele.me (Alibaba) data mining intern · Internet+ national Gold Award">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cherishchencherish.github.io/cherish-projects/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>C</text></svg>">
@@ -37,7 +37,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:52px;d
 .nav-cta:hover{background:rgba(255,255,255,.14)}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 40px;position:relative}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 40px;position:relative;overflow:hidden}
 .hero-photo{width:140px;height:140px;border-radius:50%;overflow:hidden;border:2px solid var(--border2);margin-bottom:24px;opacity:0;animation:fu .7s .05s forwards}
 .hero-photo img{width:100%;height:100%;object-fit:cover}
 .hero::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;background:radial-gradient(ellipse,rgba(10,132,255,.06) 0%,rgba(191,90,242,.04) 40%,transparent 70%);pointer-events:none}
@@ -124,6 +124,29 @@ section{padding:100px 40px;position:relative}
 .btn-p{background:var(--blue);color:#fff}.btn-p:hover{filter:brightness(1.15)}
 .btn-s{border:1px solid var(--border2);color:var(--text2)}.btn-s:hover{border-color:var(--text2);color:var(--text)}
 
+/* PROJECT CARD EXTRAS */
+.vbox{border:1px solid;border-radius:12px;padding:14px 18px;text-align:center;min-width:130px}
+.vbox-n{font-size:22px;font-weight:800}
+.vbox-l{font-size:10px;color:var(--text3);margin-top:2px}
+.card-ul{list-style:none;margin:0 0 16px}
+.card-ul li{font-size:12.5px;color:var(--text2);line-height:1.6;padding:3px 0 3px 14px;position:relative}
+.card-ul li::before{content:'';position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:var(--text3)}
+.card-ul b{color:var(--text);font-weight:600}
+.abox{border:1px solid;border-radius:10px;padding:10px 16px;text-align:center;min-width:150px}
+.abox-n{font-size:18px;font-weight:700}
+.abox-l{font-size:10px;color:var(--text3);margin-top:2px}
+
+/* EXPERIENCE */
+.xp{max-width:880px;margin:0 auto}
+.xp-item{display:grid;grid-template-columns:220px 1fr;gap:28px;padding:26px 0;border-bottom:1px solid var(--border)}
+.xp-item:last-child{border:none}
+.xp-co{font-size:16px;font-weight:700}
+.xp-role{font-size:12px;color:var(--text2);margin:3px 0}
+.xp-date{font-size:11px;color:var(--text3)}
+.xp ul{list-style:none}
+.xp li{font-size:13.5px;color:var(--text2);line-height:1.7;padding:3px 0 3px 16px;position:relative}
+.xp li::before{content:'';position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:50%;background:var(--text3)}
+
 /* FOOTER */
 footer{padding:40px;text-align:center;border-top:1px solid var(--border)}
 footer p{font-size:11px;color:var(--text3)}
@@ -143,7 +166,8 @@ footer p{font-size:11px;color:var(--text3)}
   .fgrid{grid-template-columns:1fr}
   .d-head h1{font-size:26px}
   .hero-photo{width:110px;height:110px}
-  .vp-grid{grid-template-columns:1fr !important}
+  .xp-item{grid-template-columns:1fr;gap:8px}
+  .vbox{min-width:0;flex:1;padding:12px}
 }
 @media(max-width:390px){
   .hero h1{font-size:32px}
@@ -160,6 +184,7 @@ footer p{font-size:11px;color:var(--text3)}
   <div class="nav-logo">Cherish Chen</div>
   <div class="nav-r">
     <a href="javascript:void(0)" onclick="goHome()">Projects</a>
+    <a href="javascript:void(0)" onclick="goTo('experience')">Experience</a>
     <a href="javascript:void(0)" onclick="goAbout()">About</a>
     <a href="https://github.com/CherishChenCherish" target="_blank">GitHub</a>
     <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank">LinkedIn</a>
@@ -172,101 +197,82 @@ footer p{font-size:11px;color:var(--text3)}
 
 <section class="hero">
   <div class="hero-photo"><img src="photo.jpg" alt="Cherish Chen"></div>
-  <div class="hero-sub">I don't just build models &mdash; I ship production systems.</div>
+  <div class="hero-sub">AI application engineer &middot; Agent systems &middot; Yale &rsquo;27</div>
   <h1>Cherish Chen</h1>
-  <p class="hero-desc">Yale M.S. &rsquo;27 &middot; Ex-Alibaba &middot; Kaggle Top 5%<br>From 100 GB/day data pipelines at Alibaba to autonomous trading signals running 24/7 &mdash; I build AI systems that work in the real world, not just in notebooks.</p>
+  <p class="hero-desc">M.S. Health Informatics at Yale, graduating May 2027. Tech lead at Suiqi AI, where I build AI tools for manufacturing and trading companies: a Data Agent on top of their ERP, multi-agent ERP schema mapping, and forecasts that run in shadow mode before they go live. Previously a data mining intern at Ele.me (Alibaba).</p>
   <div class="hero-stats">
-    <div class="stat"><div class="stat-n green">24/7</div><div class="stat-l">Live Production System</div></div>
-    <div class="stat"><div class="stat-n blue">Top 5%</div><div class="stat-l">Kaggle / 11K+</div></div>
-    <div class="stat"><div class="stat-n gold">100GB</div><div class="stat-l">Daily Pipeline</div></div>
-    <div class="stat"><div class="stat-n" style="color:var(--purple)">¥3.94M</div><div class="stat-l">Commercial Cases</div></div>
+    <div class="stat"><div class="stat-n green">5</div><div class="stat-l">Modules in production</div></div>
+    <div class="stat"><div class="stat-n blue">8 Agents</div><div class="stat-l">ERP schema mapping</div></div>
+    <div class="stat"><div class="stat-n gold">Gold</div><div class="stat-l">Internet+ national</div></div>
+    <div class="stat"><div class="stat-n" style="color:var(--purple)">Top 5%</div><div class="stat-l">Kaggle / 11,962</div></div>
   </div>
   <div style="display:flex;gap:12px;justify-content:center;margin-top:36px;opacity:0;animation:fu .7s .7s forwards;flex-wrap:wrap">
-    <a href="mailto:xinlong.chen@yale.edu" class="btn-p" style="padding:12px 28px;font-size:13px;border-radius:100px;text-decoration:none">Let's Talk &rarr;</a>
+    <a href="mailto:xinlong.chen@yale.edu" class="btn-p" style="padding:12px 28px;font-size:13px;border-radius:100px;text-decoration:none">Email me &rarr;</a>
     <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank" class="btn-s" style="padding:12px 28px;font-size:13px;border-radius:100px;text-decoration:none;border:1px solid var(--border2);color:var(--text2)">LinkedIn</a>
   </div>
   <div class="hero-scroll"><span></span></div>
 </section>
 
 <section id="projects">
-  <!-- VALUE PROPOSITION — Social Proof + Authority + Reciprocity -->
-  <div style="max-width:960px;margin:0 auto 80px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center">
-    <div style="padding:28px 20px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.02)">
-      <div style="font-size:28px;font-weight:800;color:var(--gold);margin-bottom:6px">Gold Award Winner</div>
-      <div style="font-size:12px;color:var(--text3);line-height:1.6">BCI neuromarketing startup, CTO & Co-founder. ¥3.94M in commercial cases. 4.21M competing projects.</div>
-    </div>
-    <div style="padding:28px 20px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.02)">
-      <div style="font-size:28px;font-weight:800;color:var(--green);margin-bottom:6px">0 → 1 Builder</div>
-      <div style="font-size:12px;color:var(--text3);line-height:1.6">Multiple shipped products with real users and real revenue. Full-stack, ML pipeline, payments, infra.</div>
-    </div>
-    <div style="padding:28px 20px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.02)">
-      <div style="font-size:28px;font-weight:800;color:var(--blue);margin-bottom:6px">Alibaba → Yale</div>
-      <div style="font-size:12px;color:var(--text3);line-height:1.6">Production engineering at scale meets rigorous ML research. Both worlds, one person.</div>
-    </div>
-  </div>
-
   <div class="sec-label">Projects</div>
   <div class="sec-title">What I've Built</div>
   <div class="cards">
 
-    <!-- 0. BCI Neuromarketing — Gold Award -->
+    <!-- 0. Suiqi AI -->
     <div class="card visible" style="cursor:default;opacity:1;transform:none">
       <div class="card-vis" style="padding:36px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
-        <div class="bg gold-bg"></div>
+        <div class="bg blue-bg"></div>
         <div style="display:flex;gap:12px;position:relative;z-index:1">
-          <div style="background:rgba(255,214,10,.1);border:1px solid rgba(255,214,10,.15);border-radius:12px;padding:14px 18px;text-align:center">
-            <div style="font-size:24px;font-weight:800;color:var(--gold)">Gold Award</div>
-            <div style="font-size:10px;color:var(--text3);margin-top:2px">Innovation Competition<br>4.21M projects · 151 countries</div>
-          </div>
-          <div style="background:rgba(48,209,88,.1);border:1px solid rgba(48,209,88,.15);border-radius:12px;padding:14px 18px;text-align:center">
-            <div style="font-size:24px;font-weight:800;color:var(--green)">¥3.94M</div>
-            <div style="font-size:10px;color:var(--text3);margin-top:2px">Completed Cases<br>incl. Haidilao, SOEs</div>
-          </div>
+          <div class="vbox" style="background:rgba(10,132,255,.1);border-color:rgba(10,132,255,.15)"><div class="vbox-n" style="color:var(--blue)">8 Agents</div><div class="vbox-l">parsed 2,155 tables<br>in parallel</div></div>
+          <div class="vbox" style="background:rgba(48,209,88,.1);border-color:rgba(48,209,88,.15)"><div class="vbox-n" style="color:var(--green)">&minus;0.6%</div><div class="vbox-l">replenishment bias<br>19-month backtest</div></div>
         </div>
         <div style="display:flex;gap:12px;position:relative;z-index:1">
-          <div style="background:rgba(10,132,255,.1);border:1px solid rgba(10,132,255,.15);border-radius:12px;padding:10px 16px;text-align:center">
-            <div style="font-size:18px;font-weight:700;color:var(--blue)">23</div>
-            <div style="font-size:9px;color:var(--text3)">Patents (3 PCT in US)</div>
-          </div>
-          <div style="background:rgba(191,90,242,.1);border:1px solid rgba(191,90,242,.15);border-radius:12px;padding:10px 16px;text-align:center">
-            <div style="font-size:18px;font-weight:700;color:var(--purple)">90s</div>
-            <div style="font-size:9px;color:var(--text3)">EEG Collection → Result</div>
-          </div>
+          <div class="vbox" style="background:rgba(255,214,10,.1);border-color:rgba(255,214,10,.15)"><div class="vbox-n" style="color:var(--gold)">5 / 5</div><div class="vbox-l">P0 security issues<br>fixed</div></div>
+          <div class="vbox" style="background:rgba(191,90,242,.1);border-color:rgba(191,90,242,.15)"><div class="vbox-n" style="color:var(--purple)">5 modules</div><div class="vbox-l">shipped in phases<br>all live</div></div>
         </div>
       </div>
       <div class="card-info">
-        <div class="badge badge-live"><span class="badge-dot"></span>Commercialized · Gold Award</div>
-        <h3>BCI Neuromarketing System</h3>
-        <div class="oneliner">CTO & Co-founder — First commercially viable neuromarketing platform using brain-computer interfaces</div>
-        <div class="desc">Built portable EEG devices + AI-driven neural data platform. 90-second consumer brain signal collection and analysis. Served Haidilao, Foshan Lighting, Zhejiang Tobacco. ¥3.94M in completed cases, ¥1.75M in signed agreements. Endorsed by academician-level advisors.</div>
+        <div class="badge badge-live"><span class="badge-dot"></span>Tech Lead &middot; Mar 2026 &ndash; now</div>
+        <h3>Suiqi AI (Hangzhou)</h3>
+        <div class="oneliner">AI applications for manufacturing and trading companies. First paying client: a metals distributor with 10,000+ SKUs.</div>
+        <ul class="card-ul">
+          <li><b>Data Agent:</b> read-only ERP access, natural-language queries over sales, customers and inventory; role-based permissions at the tool level</li>
+          <li><b>ERP ontology:</b> 8 agents parsed 2,155 tables and 1,344 views / stored procedures in Yonyou T+, producing a field-level ontology across 12 domains; a lead agent cross-checked the output and caught 2 wrong conclusions</li>
+          <li><b>Replenishment forecast:</b> walk-forward backtest over 19 months cut bias from &minus;6.9% to &minus;0.6%; found a parameter coupling that would have caused +29% over-ordering, so the switch went through shadow runs and out-of-sample reconciliation first</li>
+          <li><b>Quality:</b> custom telemetry and dashboards; a 9-agent adversarial review surfaced 64 issues, all 5 P0 security issues fixed; 23 business rules live in one registry, each with its own assertion</li>
+        </ul>
         <div class="tags">
-          <span class="tag">BCI</span><span class="tag">Portable EEG</span><span class="tag">ML / Emotion Algo</span><span class="tag">Neuromarketing</span><span class="tag">14 Authorized Patents</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;margin-top:18px">
-          <span onclick="window.open('https://cic.tju.edu.cn/info/1040/4784.htm','_blank')" style="font-size:10px;color:var(--gold);border:1px solid rgba(255,214,10,.2);padding:3px 9px;border-radius:100px;cursor:pointer;background:rgba(255,214,10,.06)">TJU Official Coverage →</span>
+          <span class="tag">Data Agent</span><span class="tag">Multi-Agent</span><span class="tag">Text-to-SQL</span><span class="tag">Ontology</span><span class="tag">Forecasting</span><span class="tag">Observability</span>
         </div>
       </div>
     </div>
 
-    <!-- 1. JobPilot — Live SaaS -->
-    <a href="javascript:void(0)" class="card" onclick="openDetail('jobpilot')">
-      <div class="card-vis" style="padding:0;overflow:hidden">
-        <img src="jobpilot-preview.gif" alt="JobPilot Demo" loading="lazy" style="width:100%;height:100%;object-fit:cover;opacity:.85">
+    <!-- 1. BCI -->
+    <div class="card visible" style="cursor:default;opacity:1;transform:none">
+      <div class="card-vis" style="padding:36px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
+        <div class="bg gold-bg"></div>
+        <div style="display:flex;gap:12px;position:relative;z-index:1">
+          <div class="vbox" style="background:rgba(255,214,10,.1);border-color:rgba(255,214,10,.15)"><div class="vbox-n" style="color:var(--gold)">Gold Award</div><div class="vbox-l">9th China Internet+<br>national final</div></div>
+          <div class="vbox" style="background:rgba(48,209,88,.1);border-color:rgba(48,209,88,.15)"><div class="vbox-n" style="color:var(--green)">&yen;3.94M</div><div class="vbox-l">in client projects<br>incl. Haidilao</div></div>
+        </div>
+        <div style="display:flex;gap:12px;position:relative;z-index:1">
+          <div class="vbox" style="background:rgba(191,90,242,.1);border-color:rgba(191,90,242,.15)"><div class="vbox-n" style="color:var(--purple)">90s</div><div class="vbox-l">EEG capture &rarr; report</div></div>
+          <div class="vbox" style="background:rgba(10,132,255,.1);border-color:rgba(10,132,255,.15)"><div class="vbox-n" style="color:var(--blue)">4</div><div class="vbox-l">founding members</div></div>
+        </div>
       </div>
       <div class="card-info">
-        <div class="badge badge-live"><span class="badge-dot"></span>Live Product</div>
-        <h3>JobPilot</h3>
-        <div class="oneliner">AI job search engine that verifies postings are actually open, then writes your cover letters</div>
-        <div class="desc">Upload your resume, get matched jobs from Greenhouse &amp; Lever APIs across 50+ top companies, every posting verified against ghost jobs, then Claude generates tailored cover letters. Google OAuth, Stripe billing, Railway + Vercel deployment.</div>
+        <div class="badge badge-live"><span class="badge-dot"></span>Co-founder / CTO &middot; 2023 &ndash; 2024</div>
+        <h3>BCI Consumer Insights</h3>
+        <div class="oneliner">Portable EEG + emotion recognition for consumer research</div>
+        <div class="desc">One of four founders; I owned the tech. Built the EEG signal processing and emotion recognition ML pipeline that turns portable headset data into a 90-second consumer insight report. Delivered &yen;3.94M in client projects for companies including Haidilao and Foshan Lighting. Won a national Gold Award at the 9th China International &ldquo;Internet+&rdquo; Innovation Competition.</div>
         <div class="tags">
-          <span class="tag">Next.js 14</span><span class="tag">Flask</span><span class="tag">Claude API</span><span class="tag">Stripe</span><span class="tag">Google OAuth</span><span class="tag">PostgreSQL</span>
+          <span class="tag">EEG</span><span class="tag">Signal Processing</span><span class="tag">Emotion Recognition</span><span class="tag">ML Pipeline</span>
         </div>
         <div style="display:flex;align-items:center;gap:12px;margin-top:18px">
-          <span class="arrow" style="margin:0">View details &rarr;</span>
-          <span onclick="event.stopPropagation();window.open('https://jobpilot-plum.vercel.app','_blank')" style="font-size:10px;color:var(--green);border:1px solid rgba(48,209,88,.2);padding:3px 9px;border-radius:100px;cursor:pointer;background:rgba(48,209,88,.06)">Live Demo</span>
+          <span onclick="window.open('https://cic.tju.edu.cn/info/1040/4784.htm','_blank')" style="font-size:10px;color:var(--gold);border:1px solid rgba(255,214,10,.2);padding:3px 9px;border-radius:100px;cursor:pointer;background:rgba(255,214,10,.06)">Tianjin University coverage &rarr;</span>
         </div>
       </div>
-    </a>
+    </div>
 
     <!-- 2. Gold Monitor -->
     <a href="javascript:void(0)" class="card" onclick="openDetail('gold')">
@@ -274,18 +280,35 @@ footer p{font-size:11px;color:var(--text3)}
         <img src="gold-monitor-preview.gif" alt="Gold Monitor Demo" loading="lazy" style="width:100%;height:100%;object-fit:cover;opacity:.85">
       </div>
       <div class="card-info">
-        <div class="badge badge-live"><span class="badge-dot"></span>Live &mdash; 24/7</div>
+        <div class="badge badge-live"><span class="badge-dot"></span>Solo project &middot; Mar 2026 &ndash; now</div>
         <h3>Gold Monitor</h3>
-        <div class="oneliner">Autonomous XAUUSD trading signal system with backtested multi-factor scoring</div>
-        <div class="desc">Real-time price monitoring, 5-factor technical scoring (RSI, MACD, volume, Bollinger, multi-TF alignment), ATR-based risk management with 2:1 R:R enforcement, and mobile push alerts via Bark. Runs via macOS launchd.</div>
+        <div class="oneliner">XAUUSD trading signals with a memory &rarr; reasoning &rarr; reflection loop</div>
+        <div class="desc">A 17-module real-time pipeline: multi-factor scoring, market regime detection, BM25 recall of similar past signals, a rule + LLM critic that argues against each trade, a risk gate, and an automatic post-trade review written back to memory.</div>
         <div class="tags">
-          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">WebSocket</span><span class="tag">Technical Analysis</span><span class="tag">Bark Push</span><span class="tag">launchd</span>
+          <span class="tag">Python</span><span class="tag">Agent Memory</span><span class="tag">BM25</span><span class="tag">LLM Critic</span><span class="tag">Risk Gate</span>
         </div>
-        <div class="arrow">View architecture &amp; details &rarr;</div>
+        <div class="arrow">View architecture &rarr;</div>
       </div>
     </a>
 
-    <!-- 3. Live Assistant -->
+    <!-- 3. JobPilot -->
+    <a href="javascript:void(0)" class="card" onclick="openDetail('jobpilot')">
+      <div class="card-vis" style="padding:0;overflow:hidden">
+        <img src="jobpilot-preview.gif" alt="JobPilot Demo" loading="lazy" style="width:100%;height:100%;object-fit:cover;opacity:.85">
+      </div>
+      <div class="card-info">
+        <div class="badge badge-beta"><span class="badge-dot"></span>Solo build &middot; shipped Mar 2026</div>
+        <h3>JobPilot</h3>
+        <div class="oneliner">AI job search that only shows postings it can confirm are still open</div>
+        <div class="desc">Most job boards are full of postings that closed weeks ago. JobPilot checks every job against the Greenhouse and Lever APIs through a multi-stage verification pipeline, and uses the Claude API for resume parsing and job matching. Next.js + Flask + PostgreSQL, with Stripe subscriptions.</div>
+        <div class="tags">
+          <span class="tag">Next.js</span><span class="tag">Flask</span><span class="tag">Claude API</span><span class="tag">PostgreSQL</span><span class="tag">Stripe</span>
+        </div>
+        <div class="arrow">View details &rarr;</div>
+      </div>
+    </a>
+
+    <!-- 4. Live Assistant -->
     <a href="javascript:void(0)" class="card" onclick="openDetail('live')">
       <div class="card-vis" style="padding:0;overflow:hidden">
         <img src="live-assistant-preview.gif" alt="Live Assistant Demo" loading="lazy" style="width:100%;height:100%;object-fit:cover;opacity:.85">
@@ -293,10 +316,10 @@ footer p{font-size:11px;color:var(--text3)}
       <div class="card-info">
         <div class="badge badge-beta"><span class="badge-dot"></span>Beta</div>
         <h3>Live Assistant</h3>
-        <div class="oneliner">Real-time AI interview coach with streaming answers in under 8 seconds</div>
-        <div class="desc">Listens via Whisper, detects interview questions with 45+ pattern matchers + LLM verification, and streams context-aware answers through Ollama. Apple-inspired dark UI with cursor-pulse streaming animation.</div>
+        <div class="oneliner">Real-time interview assistant, first token in under 8 seconds</div>
+        <div class="desc">Transcribes with Whisper, catches interview questions with 45+ patterns (weak matches go to an LLM check), and streams a suggested answer from Ollama.</div>
         <div class="tags">
-          <span class="tag">Whisper</span><span class="tag">Ollama</span><span class="tag">FastAPI</span><span class="tag">WebSocket Streaming</span><span class="tag">HMAC License</span>
+          <span class="tag">Whisper</span><span class="tag">Ollama</span><span class="tag">FastAPI</span><span class="tag">WebSocket Streaming</span>
         </div>
         <div style="display:flex;align-items:center;gap:12px;margin-top:18px">
           <span class="arrow" style="margin:0">View details &rarr;</span>
@@ -305,6 +328,7 @@ footer p{font-size:11px;color:var(--text3)}
       </div>
     </a>
 
+    <!-- 5. AI-PM -->
     <a href="javascript:void(0)" class="card" onclick="openDetail('aipm')">
       <div class="card-vis">
         <div class="bg purp-bg"></div>
@@ -314,58 +338,73 @@ footer p{font-size:11px;color:var(--text3)}
       <div class="card-info">
         <div class="badge badge-dev"><span class="badge-dot"></span>In Development</div>
         <h3>AI-PM</h3>
-        <div class="oneliner">AI-native project management with integrated Ollama/OpenAI assistant</div>
-        <div class="desc">Full-stack PM platform with task tracking, goal setting, time logging, calendar integration, and an AI assistant for planning and weekly reviews. React frontend + FastAPI backend + SQLite.</div>
+        <div class="oneliner">Project management with a built-in Ollama / OpenAI assistant</div>
+        <div class="desc">Tasks, goals, time logs and calendar, plus an assistant for planning and weekly reviews. React + FastAPI + SQLite. Runs locally for now.</div>
         <div class="tags">
-          <span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">SQLite</span><span class="tag">Ollama / OpenAI</span><span class="tag">Vite</span><span class="tag">Alembic</span>
+          <span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">SQLite</span><span class="tag">Ollama / OpenAI</span>
         </div>
-        <div class="arrow">View architecture &amp; details &rarr;</div>
+        <div class="arrow">View details &rarr;</div>
       </div>
     </a>
 
   </div>
 </section>
 
+<section id="experience">
+  <div class="sec-label">Experience</div>
+  <div class="sec-title">Internships &amp; Research</div>
+  <div class="xp">
+    <div class="xp-item">
+      <div class="xp-l"><div class="xp-co">Ele.me (Alibaba)</div><div class="xp-role">Data Mining Engineer Intern &middot; Hangzhou</div><div class="xp-date">Jul &ndash; Sep 2024</div></div>
+      <ul>
+        <li>Alipay &times; Ele.me new-user push campaign: I owned data pulls and analysis. Joined Alipay user profiles with Ele.me order, inventory and coupon data (50&ndash;100 GB/day) in SQL, built segment audiences (students, young professionals, parents) and post-campaign reviews, and supported A/B tests on content, send time (9&ndash;11 pm), discounts and delivery time</li>
+        <li>Qixi Festival flowers &amp; gifts category analysis: aligned year-over-year comparison by festival date, not calendar date (Aug 10, 2024 vs Aug 22, 2023), broke down peak hours, basket size and on-time delivery, and recommended stocking and promotion timing</li>
+      </ul>
+    </div>
+    <div class="xp-item">
+      <div class="xp-l"><div class="xp-co">Gate.io</div><div class="xp-role">Business Analyst Intern</div><div class="xp-date">Jun &ndash; Sep 2023</div></div>
+      <ul>
+        <li>UAE user growth: PCA + SVM on competitor and user behavior data, plus multivariate tests on 50K+ users; engagement +14%</li>
+        <li>Random forest + RNN ensemble on search volume, page views and Cision media signals; news trend prediction accuracy +12%</li>
+      </ul>
+    </div>
+    <div class="xp-item">
+      <div class="xp-l"><div class="xp-co">Mercer</div><div class="xp-role">Summer Consulting Analyst &middot; Shanghai</div><div class="xp-date">Jul &ndash; Sep 2022</div></div>
+      <ul>
+        <li>China autonomous-driving talent study: DBSCAN clustering + ARIMA forecasting on 200+ professional profiles, identified 3 high-growth talent segments</li>
+        <li>Pharma client: decision trees + neural nets on pay structure for 200+ roles to locate systemic pay compression; presented findings to client executives</li>
+      </ul>
+    </div>
+    <div class="xp-item">
+      <div class="xp-l"><div class="xp-co">University of Washington</div><div class="xp-role">Research Assistant</div><div class="xp-date">Dec 2023 &ndash; Sep 2024</div></div>
+      <ul>
+        <li>Comment constructiveness (Prof. Tanu Mitra): Chrome extension scoring comments in real time with GPT + Perspective API and suggesting rewrites; Sentence-BERT + PCA entropy-weighted scoring; 8K+ Reddit / Twitter comments, average constructiveness +0.3 on a 1&ndash;5 scale</li>
+        <li>LLM content safety (Prof. David McDonald): wired OpenAI Moderation and Perspective API into an LLM pipeline over 100K+ interactions, built a precision / recall evaluation across 6 toxicity categories; missed detections &minus;35%</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section id="about">
   <div class="sec-label">About</div>
-  <div class="sec-title">The Person Behind the Systems</div>
+  <div class="sec-title">Background</div>
   <div class="about-wrap">
-    <p>Most engineers can build a model. Few can take it from notebook to production, handle payments, manage infrastructure, and keep it running at 3 AM. <strong>I do all of it.</strong></p>
-    <p><strong>Yale University</strong> M.S. Health Informatics (STEM, graduating 2027). <strong>University of Washington</strong> double major in Data Science + Economics &mdash; 3.86 GPA, Dean's List 10 straight quarters. Bilingual English/Chinese.</p>
-    <p>At <strong>Alibaba (Ele.me)</strong>, I built 50-100 GB/day pharmaceutical analytics pipelines that lifted conversion 15%. At <strong>Gate.io</strong>, I built RF+RNN ensembles on 50K+ users that drove 14% engagement. At <strong>Mercer Consulting</strong>, I delivered DBSCAN + neural network compensation analytics directly to C-suite executives.</p>
-    <p>After hours, I build my own products &mdash; a live SaaS with paying users, an autonomous trading system running 24/7, and an AI interview coach. Every project on this page runs in production or is validated on real data. No toy demos.</p>
-    <p style="font-size:13px;color:var(--text3);font-style:italic;border-left:2px solid var(--border2);padding-left:14px;margin-top:20px">"The best way to predict the future is to build it." &mdash; That's not a platitude for me. It's Tuesday.</p>
+    <p><strong>Yale University</strong>, M.S. Health Informatics (STEM), 2025&ndash;2027: 3 courses with Honors, the rest High Pass. <strong>University of Washington</strong>, B.S. Informatics (Data Science) + B.A. Economics, minor in Mathematics: GPA 3.86/4.0 (top 5% of major), Dean&rsquo;s List 10 quarters, TA for Database &amp; Data Modeling. GRE 333.</p>
+    <p>Second author, <em>A Fine-grained Classification Method for Cross-domain Policy Texts Based on Instruction Tuning</em>, Information Systems Frontiers, 2025 (SCI, JCR Q1).</p>
+    <p>Looking for 2027 new-grad roles in AI application engineering or AI product. Bilingual in English and Mandarin.</p>
 
     <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:28px 0 20px">
-      <div style="background:rgba(48,209,88,.08);border:1px solid rgba(48,209,88,.15);border-radius:10px;padding:10px 16px;text-align:center;min-width:130px">
-        <div style="font-size:18px;font-weight:700;color:var(--green)">Top 5%</div>
-        <div style="font-size:10px;color:var(--text3);margin-top:2px">Kaggle LLM Exam<br>11,962 entrants</div>
-      </div>
-      <div style="background:rgba(255,214,10,.08);border:1px solid rgba(255,214,10,.15);border-radius:10px;padding:10px 16px;text-align:center;min-width:130px">
-        <div style="font-size:18px;font-weight:700;color:var(--gold)">Gold Award</div>
-        <div style="font-size:10px;color:var(--text3);margin-top:2px">Internet+ Innovation<br>3.4M projects, 111 countries</div>
-      </div>
-      <div style="background:rgba(10,132,255,.08);border:1px solid rgba(10,132,255,.15);border-radius:10px;padding:10px 16px;text-align:center;min-width:130px">
-        <div style="font-size:18px;font-weight:700;color:var(--blue)">0.94 AUPRC</div>
-        <div style="font-size:10px;color:var(--text3);margin-top:2px">Fraud Detection<br>284K transactions</div>
-      </div>
-      <div style="background:rgba(191,90,242,.08);border:1px solid rgba(191,90,242,.15);border-radius:10px;padding:10px 16px;text-align:center;min-width:130px">
-        <div style="font-size:18px;font-weight:700;color:var(--purple)">100GB/day</div>
-        <div style="font-size:10px;color:var(--text3);margin-top:2px">Pipeline at Alibaba<br>pharma retail data</div>
-      </div>
-      <div style="background:rgba(255,69,58,.08);border:1px solid rgba(255,69,58,.15);border-radius:10px;padding:10px 16px;text-align:center;min-width:130px">
-        <div style="font-size:18px;font-weight:700;color:var(--red)">¥3.94M</div>
-        <div style="font-size:10px;color:var(--text3);margin-top:2px">BCI Cases Completed<br>CTO & Co-founder</div>
-      </div>
+      <div class="abox" style="background:rgba(255,214,10,.08);border-color:rgba(255,214,10,.15)"><div class="abox-n" style="color:var(--gold)">Gold Award</div><div class="abox-l">9th China Internet+<br>BCI project</div></div>
+      <div class="abox" style="background:rgba(48,209,88,.08);border-color:rgba(48,209,88,.15)"><div class="abox-n" style="color:var(--green)">Top 5%</div><div class="abox-l">Kaggle LLM Science Exam<br>11,962 entrants</div></div>
+      <div class="abox" style="background:rgba(10,132,255,.08);border-color:rgba(10,132,255,.15)"><div class="abox-n" style="color:var(--blue)">Top 8%</div><div class="abox-l">Kaggle Student Performance<br>19,097 entrants</div></div>
     </div>
 
     <div class="about-tags">
-      <span class="about-tag">Python</span><span class="about-tag">PyTorch</span><span class="about-tag">scikit-learn</span>
-      <span class="about-tag">XGBoost</span><span class="about-tag">NLP / BERT</span><span class="about-tag">Deep Learning</span>
-      <span class="about-tag">FastAPI</span><span class="about-tag">React</span><span class="about-tag">SQL</span>
-      <span class="about-tag">AWS / Docker</span><span class="about-tag">WebSocket</span><span class="about-tag">Ollama / LLMs</span>
-      <span class="about-tag">A/B Testing</span><span class="about-tag">Feature Engineering</span><span class="about-tag">ETL Pipelines</span>
-      <span class="about-tag">Technical Writing</span><span class="about-tag">Content Creation (10K+)</span><span class="about-tag">3D Printing / CAD</span>
+      <span class="about-tag">Agents (memory, tool calling, self-correction)</span><span class="about-tag">RAG &amp; vector search</span><span class="about-tag">Context / Prompt Engineering</span>
+      <span class="about-tag">MCP</span><span class="about-tag">Skills</span><span class="about-tag">Multi-agent orchestration</span><span class="about-tag">LLM-as-judge</span>
+      <span class="about-tag">Hallucination &amp; prompt-injection defense</span><span class="about-tag">Claude Code (26 custom commands, hooks, review subagents)</span><span class="about-tag">Cursor</span>
+      <span class="about-tag">Python</span><span class="about-tag">Java</span><span class="about-tag">TypeScript</span><span class="about-tag">SQL</span><span class="about-tag">Flask</span><span class="about-tag">Next.js</span><span class="about-tag">PyTorch</span>
+      <span class="about-tag">SQL Server</span><span class="about-tag">PostgreSQL</span><span class="about-tag">Redis</span><span class="about-tag">Linux</span><span class="about-tag">Git</span>
     </div>
     <div class="about-links">
       <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank" class="btn-p">LinkedIn</a>
@@ -381,7 +420,7 @@ footer p{font-size:11px;color:var(--text3)}
 <div class="detail" id="d-gold">
   <span class="back" onclick="goHome()">&larr; All Projects</span>
   <div class="d-head"><div class="d-ico gold-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#ffd60a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l4-4 4 4 4-8 6 6"/><path d="M21 3v6h-6"/><path d="M21 9l-4.5-4.5"/></svg></div><h1>Gold Monitor</h1></div>
-  <div class="d-meta"><div class="badge badge-live"><span class="badge-dot"></span>Live &mdash; 24/7 via launchd</div></div>
+  <div class="d-meta"><div class="badge badge-live"><span class="badge-dot"></span>Solo project &middot; Mar 2026 &ndash; now</div></div>
   <div class="d-body">
     <div style="border-radius:12px;overflow:hidden;margin-bottom:24px;border:1px solid var(--border)">
       <video autoplay loop muted playsinline style="width:100%;display:block">
@@ -389,41 +428,31 @@ footer p{font-size:11px;color:var(--text3)}
       </video>
     </div>
     <h2>Overview</h2>
-    <p>A production trading signal system for XAUUSD (gold) that runs autonomously on macOS. Monitors price every 30 seconds, performs multi-factor technical analysis across 3 timeframes, enforces strict risk-reward criteria, and pushes actionable alerts to mobile via Bark.</p>
-    <p style="margin-top:10px">Built on quantitative analysis experience from <strong>Gate.io</strong> (RF+RNN ensembles on 50K+ users, 14% engagement lift) and <strong>Mercer Consulting</strong> (DBSCAN/ARIMA on compensation data). Backtesting methodology informed by Kaggle competition practice (Top 5%, 11,962 entrants).</p>
-    <h2>Architecture</h2>
-    <div class="arch">gold-api.com (30s poll)
+    <p>A real-time signal system for XAUUSD (gold). Each signal passes through scoring, memory recall and an adversarial check before it reaches me, and every closed trade is reviewed and written back so the next similar setup can draw on it.</p>
+    <h2>Pipeline</h2>
+    <div class="arch">Price feed
   &#8595;
-data_layer.py &#8594; OHLCV candles, ATR, volume, structure
+Multi-factor scoring
   &#8595;
-signal_engine.py &#8594; 5-factor scoring (0&#8211;9 pts)
-  &#9474;  &#8226; Multi-timeframe alignment (1m / 5m / 1h)
-  &#9474;  &#8226; RSI overbought/oversold confirmation
-  &#9474;  &#8226; MACD crossover alignment
-  &#9474;  &#8226; Volume vs. moving average
-  &#9474;  &#8226; Bollinger Band position
+Market regime detection
   &#8595;
-Gate: score &#8805; 4.5 AND R:R &#8805; 2.0
+Memory recall &#8594; BM25 over past signals and their outcomes
   &#8595;
-monitor_engine.py &#8594; Bark push + macOS dialog + voice
+Critic &#8594; rules + LLM argue against the trade
   &#8595;
-gold_web.py &#8594; Real-time WebSocket dashboard</div>
-    <h2>Signal System</h2>
-    <div class="fgrid">
-      <div class="fitem"><h4>Multi-Factor Scoring</h4><p>5 technical factors scored 0&#8211;9. Only signals scoring 4.5+ fire. NY session requires 6.0+ (backtested: 15% win rate below).</p></div>
-      <div class="fitem"><h4>Risk Management</h4><p>ATR-based stop losses at 1.5&#215; ATR. Minimum 2:1 risk-reward enforced before any alert fires.</p></div>
-      <div class="fitem"><h4>Structural Levels</h4><p>Dynamic breakout, resistance, recovery, support, and demand zone tracking with periodic auto-update.</p></div>
-      <div class="fitem"><h4>Sentiment Overlay</h4><p>News keyword scoring, economic calendar event suppression, and DXY inverse correlation checks.</p></div>
-    </div>
-    <h2>Key Decisions</h2>
+Risk gate
+  &#8595;
+Alert &#8594; trade &#8594; post-trade review
+  &#8595;
+Review written back to memory</div>
+    <h2>Why this shape</h2>
     <ul>
-      <li><span class="hl">Backtested thresholds:</span> MIN_SIGNAL_SCORE=4.5 and ATR_STOP_MULT=1.5 optimized on historical data, not arbitrary</li>
-      <li><span class="hl">NY session gate:</span> Score threshold raised to 6.0 during New York hours after backtesting showed poor win rates below</li>
-      <li><span class="hl">15-min cooldown:</span> Prevents alert fatigue from repeated signals at the same level</li>
-      <li><span class="hl">Full trade logging:</span> Every signal logged with entry, stop, target, score, and contributing factors in JSONL</li>
+      <li><span class="hl">Memory:</span> a signal is judged alongside how similar past signals played out, not in isolation</li>
+      <li><span class="hl">Critic:</span> a dedicated step whose only job is to find reasons not to take the trade</li>
+      <li><span class="hl">Reflection:</span> post-trade reviews close the loop, so the memory grows from real outcomes</li>
     </ul>
     <h2>Tech Stack</h2>
-    <p>Python, FastAPI, WebSocket, gold-api.com, Bark push, macOS launchd, JSONL logging, sentiment analysis</p>
+    <p>Python, FastAPI, WebSocket, BM25 retrieval, LLM critic, 17 modules</p>
   </div>
 </div>
 
@@ -439,8 +468,7 @@ gold_web.py &#8594; Real-time WebSocket dashboard</div>
       </video>
     </div>
     <h2>Overview</h2>
-    <p>A real-time AI interview coach. Listens to your interview via microphone, automatically detects when the interviewer asks a question, and streams a suggested answer to your screen &mdash; all in under 8 seconds from question to first visible token.</p>
-    <p style="margin-top:10px">Draws on NLP research experience: built a Sentence-BERT + GPT Chrome extension classifying 8K+ comments as a Research Assistant, and integrated toxicity detection across 100K+ LLM interactions (35% toxic content reduction). Pattern-matching and streaming architecture informed by production pipeline work at <strong>Alibaba</strong> (50-100 GB/day).</p>
+    <p>Listens to an interview through the microphone, detects when a question has been asked, and streams a suggested answer to the screen. Under 8 seconds from the end of the question to the first visible token.</p>
     <h2>Architecture</h2>
     <div class="arch">Microphone (sounddevice, 16kHz, 4s chunks)
   &#8595;
@@ -459,19 +487,19 @@ asyncio.Queue &#8594; WebSocket (50ms poll)
 Frontend: token-by-token streaming display</div>
     <h2>Features</h2>
     <div class="fgrid">
-      <div class="fitem"><h4>Real-Time Transcription</h4><p>Whisper speech-to-text with VAD filtering. System audio capture via BlackHole for virtual meetings.</p></div>
-      <div class="fitem"><h4>Smart Detection</h4><p>45+ interview patterns with preamble extraction. Strong matches skip LLM for 5s faster response.</p></div>
-      <div class="fitem"><h4>Streaming Responses</h4><p>Token-by-token via Ollama streaming API. Cursor-pulse animation while generating.</p></div>
-      <div class="fitem"><h4>Follow-Up Predictions</h4><p>Predicts likely next questions + generates keyword talking points asynchronously.</p></div>
-      <div class="fitem"><h4>Context-Aware</h4><p>Upload resume, JD, or notes. Responses reference your actual background and experiences.</p></div>
-      <div class="fitem"><h4>Meeting Detection</h4><p>Auto-detects Zoom, Teams, WeMeet, Google Meet and recommends the correct audio device.</p></div>
+      <div class="fitem"><h4>Transcription</h4><p>Whisper with VAD filtering. System audio via BlackHole for video calls.</p></div>
+      <div class="fitem"><h4>Question detection</h4><p>45+ patterns with preamble extraction. Strong matches skip the LLM check, about 5s faster.</p></div>
+      <div class="fitem"><h4>Streaming</h4><p>Token-by-token through the Ollama streaming API.</p></div>
+      <div class="fitem"><h4>Follow-ups</h4><p>Predicts likely next questions and prepares keyword talking points in the background.</p></div>
+      <div class="fitem"><h4>Your context</h4><p>Upload a resume, JD or notes; answers draw on your own background.</p></div>
+      <div class="fitem"><h4>Meeting detection</h4><p>Detects Zoom, Teams, WeMeet and Google Meet and suggests the right audio device.</p></div>
     </div>
     <h2>Key Decisions</h2>
     <ul>
-      <li><span class="hl">Thread-safe WS bridge:</span> Background threads use asyncio.Queue.put_nowait() &#8594; async consumer &#8594; ws.send()</li>
-      <li><span class="hl">HTTP API over subprocess:</span> Saves 2&#8211;3s per Ollama call from process startup overhead, enables streaming</li>
-      <li><span class="hl">350-char response cap:</span> Must be readable in 5 seconds during a live interview</li>
-      <li><span class="hl">Model warmup on startup:</span> 1-token ping pre-loads model into memory before first real question</li>
+      <li><span class="hl">Thread-safe WS bridge:</span> background threads use asyncio.Queue.put_nowait() &#8594; async consumer &#8594; ws.send()</li>
+      <li><span class="hl">HTTP API over subprocess:</span> saves 2&#8211;3s per Ollama call and enables streaming</li>
+      <li><span class="hl">350-char answer cap:</span> has to be readable in about 5 seconds mid-interview</li>
+      <li><span class="hl">Warmup on startup:</span> a 1-token ping loads the model before the first real question</li>
     </ul>
     <h2>Tech Stack</h2>
     <p>Python, FastAPI, WebSocket, faster-whisper, Ollama (gemma3:4b), sounddevice, HMAC-SHA256 license system</p>
@@ -483,7 +511,7 @@ Frontend: token-by-token streaming display</div>
 <div class="detail" id="d-jobpilot">
   <span class="back" onclick="goHome()">&larr; All Projects</span>
   <div class="d-head"><div class="d-ico" style="background:rgba(48,209,88,.1)"><svg viewBox="0 0 24 24" fill="none" stroke="#30d158" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h1>JobPilot</h1></div>
-  <div class="d-meta"><div class="badge badge-live"><span class="badge-dot"></span>Live &mdash; Deployed on Railway + Vercel</div></div>
+  <div class="d-meta"><div class="badge badge-beta"><span class="badge-dot"></span>Solo build &middot; shipped Mar 2026</div></div>
   <div class="d-body">
     <div style="border-radius:12px;overflow:hidden;margin-bottom:24px;border:1px solid var(--border)">
       <video autoplay loop muted playsinline style="width:100%;display:block">
@@ -491,54 +519,34 @@ Frontend: token-by-token streaming display</div>
       </video>
     </div>
     <h2>Overview</h2>
-    <p>Most job boards are graveyards of ghost postings. JobPilot solves this: upload your resume, and the system searches 50+ curated companies via Greenhouse &amp; Lever APIs, verifies every posting is actually open (not a ghost job), then generates tailored cover letters using Claude &mdash; all in one pipeline.</p>
-    <p style="margin-top:10px">Deployed as a production SaaS with Google OAuth, Stripe subscription billing, and a daily refresh daemon that re-verifies cached jobs. Built to solve a real pain point during the 2026 job market.</p>
+    <p>The hard part of job search tooling is stale data: a large share of listed jobs are already closed. JobPilot pulls jobs from Greenhouse and Lever, verifies each one is still open, and only then shows it. The Claude API handles resume parsing and job matching.</p>
 
     <h2>Architecture</h2>
     <div class="arch">Resume (PDF) &#8594; parser.py (PyMuPDF + Claude extraction)
   &#8595;
-searcher.py &#8594; Greenhouse &amp; Lever APIs (50+ companies)
+searcher.py &#8594; Greenhouse &amp; Lever APIs
   &#9474;  Profile-aware query building
-  &#9474;  Degree-strict filtering (no PhD-only for MS)
-  &#9474;  Category-tagged company matching
+  &#9474;  Degree filtering (no PhD-only roles for MS)
   &#8595;
-verifier.py &#8594; Paranoid verification pipeline
-  &#9474;  1. ATS API check (100% definitive)
-  &#9474;  2. HTML signal analysis (closed/open/ambiguous)
-  &#9474;  3. Ghost job detection (age &gt; 60 days = suspect)
-  &#9474;  Philosophy: honest "unverified" &gt; wrong "open"
+verifier.py &#8594; multi-stage verification
+  &#9474;  1. ATS API check
+  &#9474;  2. HTML signal analysis (closed / open / ambiguous)
+  &#9474;  3. Posting-age check
+  &#9474;  Ambiguous &#8594; labeled "unverified", never "open"
   &#8595;
-generator.py &#8594; Claude-powered cover letters
-  &#9474;  Tone mapping: startup/consulting/research
-  &#9474;  Banned hollow phrases (89% of AI CLs fail this)
-  &#9474;  Problem-Solution format (49% more interviews)
+generator.py &#8594; Claude-generated cover letters
   &#8595;
-exporter.py &#8594; 4-sheet styled Excel export
-  &#8595;
-Next.js 14 frontend &#8594; Google OAuth + Stripe + Dashboard</div>
+Next.js frontend &#8594; Google OAuth + Stripe + dashboard</div>
 
-    <h2>What Makes It Different</h2>
-    <div class="fgrid">
-      <div class="fitem"><h4>Ghost Job Killer</h4><p>Every posting verified against real ATS APIs. "Unverified" when ambiguous &mdash; never lies about open status. Daily re-verification daemon purges stale jobs.</p></div>
-      <div class="fitem"><h4>Profile-Aware Search</h4><p>Queries built from YOUR resume, not generic templates. Degree filtering, career stage separation (intern vs new grad), and category-tagged company matching.</p></div>
-      <div class="fitem"><h4>Human Cover Letters</h4><p>Claude generates letters that sound like a person, not a template. Bans 20+ hollow phrases ("passionate about", "fast learner"). Tone adapts to company culture.</p></div>
-      <div class="fitem"><h4>Production SaaS</h4><p>Google OAuth, Stripe billing ($12/mo Pro), rate limiting, PostgreSQL, Railway backend, Vercel frontend. Real users, real payments.</p></div>
-    </div>
-
-    <h2>Key Technical Decisions</h2>
+    <h2>Key Decisions</h2>
     <ul>
-      <li><span class="hl">Verification philosophy:</span> "An honest unverified beats a wrong open." ATS API first (definitive), HTML signals second, ghost detection by posting age</li>
-      <li><span class="hl">Company registry:</span> 50+ curated companies with category tags (DS/ML, Health Informatics, SWE, PM) &mdash; not scraping LinkedIn</li>
-      <li><span class="hl">Cover letter quality:</span> Based on analysis of 80+ studies &mdash; Problem-Solution format, 49% more interviews, 72% of recruiters prioritize customization</li>
-      <li><span class="hl">Daily refresh daemon:</span> Re-verifies all cached jobs automatically, removes closed postings before users see them</li>
+      <li><span class="hl">Verification order:</span> ATS API first, HTML signals second, posting age last. When the evidence is mixed, the job is shown as "unverified"</li>
+      <li><span class="hl">Daily refresh:</span> a background job re-verifies cached postings and drops closed ones</li>
+      <li><span class="hl">Cover letters:</span> a banned-phrase list keeps generic filler ("passionate about", "fast learner") out of the output</li>
     </ul>
 
     <h2>Tech Stack</h2>
-    <p>Next.js 14, TypeScript, Tailwind CSS, Flask, SQLAlchemy, PostgreSQL, Claude API (Anthropic), Stripe, Google OAuth (NextAuth), Railway, Vercel, PyMuPDF</p>
-
-    <div style="margin-top:24px;display:flex;gap:10px;flex-wrap:wrap">
-      <span onclick="window.open('https://jobpilot-plum.vercel.app','_blank')" class="btn-p" style="padding:10px 24px;border-radius:100px;font-size:12px;cursor:pointer;display:inline-block">Try JobPilot Live</span>
-    </div>
+    <p>Next.js, TypeScript, Tailwind CSS, Flask, SQLAlchemy, PostgreSQL, Claude API, Stripe, Google OAuth (NextAuth), PyMuPDF</p>
   </div>
 </div>
 
@@ -549,8 +557,7 @@ Next.js 14 frontend &#8594; Google OAuth + Stripe + Dashboard</div>
   <div class="d-meta"><div class="badge badge-dev"><span class="badge-dot"></span>In Development</div></div>
   <div class="d-body">
     <h2>Overview</h2>
-    <p>An AI-native project management application combining traditional PM features (tasks, goals, time tracking) with an integrated AI assistant for planning, prioritization, and automated weekly reviews.</p>
-    <p style="margin-top:10px">Full-stack architecture built on experience designing data-driven dashboards at <strong>Mercer</strong> and <strong>Gate.io</strong>, plus TA experience designing SQL/ER-modeling curriculum for 40+ students. Database layer uses the same async patterns proven in production at Alibaba scale.</p>
+    <p>Project management (tasks, goals, time tracking, calendar) with an assistant for planning, prioritization and weekly reviews.</p>
     <h2>Architecture</h2>
     <div class="arch">React + Vite (port 5173)
   &#8595; REST API
@@ -562,21 +569,12 @@ FastAPI (port 8000)
 SQLite + aiosqlite (async)
   &#8595;
 AI Client (Ollama or OpenAI &#8212; configurable)</div>
-    <h2>Features</h2>
-    <div class="fgrid">
-      <div class="fitem"><h4>Project &amp; Task Management</h4><p>Full CRUD with status tracking and hierarchical project organization.</p></div>
-      <div class="fitem"><h4>Goal Tracking</h4><p>Set goals with deadlines, measure progress, review completion rates.</p></div>
-      <div class="fitem"><h4>Time Logging</h4><p>Per-task time tracking with detailed logs and aggregated reports.</p></div>
-      <div class="fitem"><h4>AI Assistant</h4><p>Chat interface for planning, task breakdown, and review generation. Ollama or OpenAI backend.</p></div>
-      <div class="fitem"><h4>Calendar</h4><p>Events with iCal utilities for scheduling and deadline management.</p></div>
-      <div class="fitem"><h4>Scheduler</h4><p>Background APScheduler for recurring notifications and automated reviews.</p></div>
-    </div>
     <h2>Status</h2>
     <ul>
-      <li><span class="hl">Backend:</span> Complete &mdash; all API endpoints functional, schema finalized with Alembic migrations</li>
-      <li><span class="hl">Frontend:</span> Complete &mdash; built and bundled with Vite</li>
-      <li><span class="hl">AI:</span> Working with Ollama, OpenAI configured but untested in production</li>
-      <li><span class="hl">Deployment:</span> Local only &mdash; not yet deployed publicly</li>
+      <li><span class="hl">Backend:</span> all API endpoints working; schema managed with Alembic migrations</li>
+      <li><span class="hl">Frontend:</span> built and bundled with Vite</li>
+      <li><span class="hl">AI:</span> working with Ollama; OpenAI configured but not yet tested</li>
+      <li><span class="hl">Deployment:</span> local only</li>
     </ul>
     <h2>Tech Stack</h2>
     <p>FastAPI, React, Vite, SQLite + aiosqlite, Alembic, Ollama / OpenAI, APScheduler</p>
@@ -584,9 +582,9 @@ AI Client (Ollama or OpenAI &#8212; configurable)</div>
 </div>
 
 <footer>
-  <p style="margin-bottom:12px;font-size:14px;color:var(--text2)">Interested in working together? I'm selectively open to the right opportunity.</p>
+  <p style="margin-bottom:12px;font-size:14px;color:var(--text2)">Hiring for AI application or AI product roles? I&rsquo;d be glad to talk.</p>
   <div style="display:flex;justify-content:center;gap:12px;margin-bottom:16px;flex-wrap:wrap">
-    <a href="mailto:xinlong.chen@yale.edu" style="padding:10px 24px;border-radius:100px;background:var(--blue);color:#fff;font-size:12px;font-weight:600;text-decoration:none;transition:all .3s">Let's Talk &rarr;</a>
+    <a href="mailto:xinlong.chen@yale.edu" style="padding:10px 24px;border-radius:100px;background:var(--blue);color:#fff;font-size:12px;font-weight:600;text-decoration:none;transition:all .3s">Email me &rarr;</a>
     <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank" style="padding:10px 24px;border-radius:100px;border:1px solid var(--border2);color:var(--text2);font-size:12px;font-weight:600;text-decoration:none">LinkedIn</a>
     <a href="https://github.com/CherishChenCherish" target="_blank" style="padding:10px 24px;border-radius:100px;border:1px solid var(--border2);color:var(--text2);font-size:12px;font-weight:600;text-decoration:none">GitHub</a>
   </div>
@@ -605,10 +603,11 @@ function goHome(){
   document.getElementById('home').style.display='';
   window.scrollTo({top:0});
 }
-function goAbout(){
+function goTo(id){
   goHome();
-  setTimeout(()=>document.getElementById('about').scrollIntoView({behavior:'smooth'}),80);
+  setTimeout(()=>document.getElementById(id).scrollIntoView({behavior:'smooth'}),80);
 }
+function goAbout(){goTo('about')}
 // Scroll-triggered card entrance
 const obs=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});

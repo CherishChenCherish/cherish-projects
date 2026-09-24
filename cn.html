@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>陈鑫隆 — AI/ML工程师 · 耶鲁大学</title>
-<meta name="description" content="陈鑫隆 Cherish Chen — 耶鲁大学硕士，前阿里巴巴数据挖掘工程师，Kaggle Top 5%。专注机器学习、实时AI系统、量化交易信号。">
-<meta property="og:title" content="陈鑫隆 — AI/ML工程师 · 耶鲁大学">
-<meta property="og:description" content="耶鲁硕士 · 前阿里巴巴 · Kaggle Top 5% · 全栈AI系统开发者">
+<title>陈鑫隆 — AI 应用研发 · 耶鲁大学</title>
+<meta name="description" content="陈鑫隆（Cherish Chen），耶鲁 Health Informatics 硕士，2027 届。燧启智能技术负责人，做 Data Agent 与多 Agent 系统；曾在饿了么做数据挖掘实习。">
+<meta property="og:title" content="陈鑫隆 — AI 应用研发 · 耶鲁大学">
+<meta property="og:description" content="耶鲁 2027 届 · 燧启智能技术负责人 · 饿了么数据挖掘实习 ·「互联网+」全国金奖">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>C</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -167,6 +167,15 @@ section{padding:80px 40px}
 .creator-tags{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
 .creator-tags span{padding:4px 12px;border-radius:100px;font-size:11px;font-weight:600;background:var(--terra-dim);border:1px solid rgba(192,78,44,.15);color:var(--terra)}
 
+/* 项目卡内的列表与数字块 */
+.proj-ul{list-style:none;padding:0;margin:0 0 14px}
+.proj-ul li{font-size:12.5px;color:var(--text2);line-height:1.7;padding:2px 0 2px 14px;position:relative}
+.proj-ul li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:var(--text3)}
+.proj-ul b,.proj-card p b{color:var(--text);font-weight:600}
+.stat-box{flex:1;border:1px solid;border-radius:12px;padding:14px;text-align:center}
+.stat-v{font-size:22px;font-weight:900}
+.stat-k{font-size:10px;color:var(--text3);margin-top:2px}
+
 /* FOOTER */
 footer{padding:48px 40px;text-align:center;border-top:1px solid var(--border);background:var(--bg2)}
 footer .f-links{margin-bottom:10px}
@@ -234,38 +243,20 @@ footer .f-sub{font-size:11px;color:var(--text3)}
     <div class="hero-text">
       <div class="hero-name">陈鑫隆</div>
       <div class="hero-name-en">Cherish (Xinlong) Chen</div>
-      <div class="hero-title">不只是做模型 — 我把AI系统送上生产环境</div>
-      <p class="hero-desc">阿里巴巴百GB级数据管道 → 7×24自主运行的量化信号系统 → 有付费用户的SaaS产品。我不写demo，我做能跑的东西。耶鲁硕士在读，中英双语流利。</p>
+      <div class="hero-title">AI 应用研发 · Agent 工程 · 耶鲁大学 2027 届</div>
+      <p class="hero-desc">耶鲁 Health Informatics 硕士在读，2027.05 毕业。现在是燧启智能的技术负责人，给制造和贸易企业做 AI 应用：Data Agent 接 ERP、多 Agent 梳理业务本体、预测模型先 shadow run 再上线。之前在饿了么做数据挖掘实习。</p>
       <div class="hero-tags">
         <span class="htag htag-yale">耶鲁大学 '27</span>
-        <span class="htag htag-ali">前阿里巴巴</span>
+        <span class="htag htag-ali">饿了么 · 阿里巴巴</span>
+        <span class="htag htag-award">「互联网+」全国金奖</span>
         <span class="htag htag-kaggle">Kaggle Top 5%</span>
-        <span class="htag htag-award">互联网+金奖</span>
       </div>
       <div class="hero-btns">
-        <a href="mailto:xinlong.chen@yale.edu" class="btn-p">聊一聊 &rarr;</a>
+        <a href="mailto:xinlong.chen@yale.edu" class="btn-p">发邮件 &rarr;</a>
         <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank" class="btn-s">LinkedIn</a>
         <a href="https://github.com/CherishChenCherish" target="_blank" class="btn-s">GitHub</a>
       </div>
-      <div class="hero-status">3个已上线产品 · 1个SaaS有付费用户 · 1个系统7×24无人值守运行</div>
-    </div>
-  </div>
-</section>
-
-<!-- VALUE PROPOSITION -->
-<section style="padding:60px 40px 20px">
-  <div style="max-width:880px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center">
-    <div class="anim" style="padding:28px 20px;border:1px solid var(--border);border-radius:var(--r);background:var(--card);box-shadow:var(--warm-shadow)">
-      <div style="font-size:26px;font-weight:900;color:var(--terra);margin-bottom:6px">从0到1</div>
-      <div style="font-size:12px;color:var(--text3);line-height:1.6">独立完成从想法到上线的全过程：产品、架构、支付、部署、运维。</div>
-    </div>
-    <div class="anim" style="padding:28px 20px;border:1px solid var(--border);border-radius:var(--r);background:var(--card);box-shadow:var(--warm-shadow)">
-      <div style="font-size:26px;font-weight:900;color:var(--forest);margin-bottom:6px">大厂+学术</div>
-      <div style="font-size:12px;color:var(--text3);line-height:1.6">阿里巴巴的工程能力 + 耶鲁的研究深度。既能扛量，也能创新。</div>
-    </div>
-    <div class="anim" style="padding:28px 20px;border:1px solid var(--border);border-radius:var(--r);background:var(--card);box-shadow:var(--warm-shadow)">
-      <div style="font-size:26px;font-weight:900;color:var(--amber);margin-bottom:6px">不是纸上谈兵</div>
-      <div style="font-size:12px;color:var(--text3);line-height:1.6">每个项目都跑在生产环境，有真用户、真数据、真交易。</div>
+      <div class="hero-status">正在找 2027 届 AI 应用研发 / 产品岗位</div>
     </div>
   </div>
 </section>
@@ -277,20 +268,21 @@ footer .f-sub{font-size:11px;color:var(--text3)}
   <div class="edu-grid">
     <div class="edu-card anim">
       <div class="edu-school">耶鲁大学</div>
-      <div class="edu-degree">健康信息学硕士（STEM）<br>应用机器学习 · 临床NLP · 医疗数据系统</div>
+      <div class="edu-degree">信息技术科学与健康 理学硕士<br>M.S. Health Informatics（STEM）<br>机器学习 · 信息学计算方法 · 生物医学信息学与数据科学 · 临床信息学 · 竞争战略</div>
       <div class="edu-meta">
-        <span class="edu-tag">2025.8 – 2027.5</span>
-        <span class="edu-tag edu-hl">STEM认证</span>
+        <span class="edu-tag">2025.08 – 2027.05</span>
+        <span class="edu-tag edu-hl">3 门 Honors，其余 High Pass</span>
       </div>
     </div>
     <div class="edu-card anim">
       <div class="edu-school">华盛顿大学（西雅图）</div>
-      <div class="edu-degree">信息学学士（数据科学）& 经济学学士<br>深度学习 · 数据库建模 · 统计分析 · 计量经济学</div>
+      <div class="edu-degree">信息学（数据科学）理学学士 + 经济学文学士，数学辅修<br>深度学习 · 算法 · 数据库与数据建模 · 统计设计与分析 · 概率论 · 矩阵代数 · 计量经济学</div>
       <div class="edu-meta">
-        <span class="edu-tag">2021.9 – 2025.6</span>
-        <span class="edu-tag edu-hl">GPA 3.86/4.0</span>
+        <span class="edu-tag">2021.09 – 2025.06</span>
+        <span class="edu-tag edu-hl">GPA 3.86/4.0（专业前 5%）</span>
         <span class="edu-tag edu-hl">Dean's List ×10</span>
         <span class="edu-tag">数据库课程助教</span>
+        <span class="edu-tag">GRE 333</span>
       </div>
     </div>
   </div>
@@ -299,41 +291,50 @@ footer .f-sub{font-size:11px;color:var(--text3)}
 <!-- EXPERIENCE -->
 <section id="exp">
   <div class="sec-label">Experience</div>
-  <div class="sec-title anim">工作经历</div>
+  <div class="sec-title anim">实习与科研</div>
   <div class="exp-list">
     <div class="exp-item anim">
       <div class="exp-left">
-        <div class="exp-company">阿里巴巴集团</div>
-        <div class="exp-role">饿了么 · 数据挖掘工程师</div>
-        <div class="exp-date">2024.7 – 2024.9</div>
+        <div class="exp-company">阿里巴巴 · 饿了么</div>
+        <div class="exp-role">数据挖掘工程师实习 · 杭州</div>
+        <div class="exp-date">2024.07 – 2024.09</div>
       </div>
       <div class="exp-right"><ul>
-        <li>主导搭建药品零售数据分析管道，日处理<span class="num">50–100 GB</span>用户画像+交易数据，覆盖<span class="num">5+</span>人群分层</li>
-        <li>带领<span class="num">3</span>名实习生完成数据采集；A/B测试优化推送策略，新用户转化率提升<span class="num">15%</span></li>
-        <li>整合支付宝画像与交易数据，构建多维度用户分群，支撑精准运营决策</li>
+        <li>支付宝 × 饿了么拉新推送（人货匹配），我负责取数和分析：用 SQL 在阿里云数据平台整合支付宝画像和饿了么订单、库存、优惠数据（日均 <span class="num">50–100 GB</span>），按大学生 / 年轻白领 / 宝妈分群出人群包和效果复盘，支撑内容、时段（晚 9–11 点）、优惠与时效三个维度的 A/B 验证</li>
+        <li>七夕鲜花礼品品类分析：同比按节日对齐，不按自然日（24 年七夕 8/10，23 年 8/22，差 <span class="num">12</span> 天），拆爆单时段、客单价、履约准时率，给出备货和投放节奏建议</li>
       </ul></div>
     </div>
     <div class="exp-item anim">
       <div class="exp-left">
         <div class="exp-company">Gate.io</div>
-        <div class="exp-role">数据分析师</div>
-        <div class="exp-date">2023.6 – 2023.9</div>
+        <div class="exp-role">商业分析实习</div>
+        <div class="exp-date">2023.06 – 2023.09</div>
       </div>
       <div class="exp-right"><ul>
-        <li>基于PCA+SVM对<span class="num">50K+</span>用户行为建模，UAE市场参与度提升<span class="num">14%</span></li>
-        <li>构建RF+RNN集成模型融合搜索、浏览及舆情特征，趋势预测准确率提升<span class="num">12%</span></li>
+        <li>阿联酋市场用户增长分析：PCA + SVM 拆竞品动态和用户行为，配合 <span class="num">5 万+</span> 用户的多变量测试，用户参与度 <span class="num">+14%</span></li>
+        <li>随机森林 + RNN 集成模型，融合搜索热度、页面浏览和 Cision 舆情特征，新闻趋势预测准确率 <span class="num">+12%</span></li>
       </ul></div>
     </div>
     <div class="exp-item anim">
       <div class="exp-left">
-        <div class="exp-company">美世咨询</div>
-        <div class="exp-role">分析师（暑期）</div>
-        <div class="exp-date">2022.7 – 2022.9</div>
+        <div class="exp-company">美世咨询 Mercer</div>
+        <div class="exp-role">咨询暑期分析师 · 上海</div>
+        <div class="exp-date">2022.07 – 2022.09</div>
       </div>
       <div class="exp-right"><ul>
-        <li>DBSCAN聚类+ARIMA预测分析<span class="num">200+</span>岗位人才分布，识别<span class="num">3</span>个高增长人才群</li>
-        <li>决策树+神经网络重设计薪酬框架，解决薪资倒挂，成果向<span class="num">C-suite</span>高管汇报</li>
-        <li><span class="num">8</span>周交付<span class="num">2</span>份可执行报告，直接支撑客户人才战略</li>
+        <li>中国自动驾驶行业人才研究：DBSCAN 聚类 + ARIMA 预测分析 <span class="num">200+</span> 从业者画像，找出 <span class="num">3</span> 个高增长方向</li>
+        <li>医药行业客户：决策树 + 神经网络分析 <span class="num">200+</span> 岗位的薪酬结构，定位系统性薪酬倒挂，结果直接汇报给客户高管</li>
+      </ul></div>
+    </div>
+    <div class="exp-item anim">
+      <div class="exp-left">
+        <div class="exp-company">华盛顿大学</div>
+        <div class="exp-role">研究助理</div>
+        <div class="exp-date">2023.12 – 2024.09</div>
+      </div>
+      <div class="exp-right"><ul>
+        <li>社交媒体评论建设性研究（Prof. Tanu Mitra）：Chrome 插件接 GPT 和 Perspective API 实时打分、给改写建议，Sentence-BERT + PCA 熵权法做评分体系；覆盖 Reddit / Twitter <span class="num">8K+</span> 条评论，平均建设性评分 <span class="num">+0.3</span>（1–5 分制）</li>
+        <li>LLM 内容安全（Prof. David McDonald）：把 OpenAI Moderation 和 Perspective API 接进 LLM pipeline，处理 <span class="num">10 万+</span> 次交互，建 6 类毒性的 precision / recall 评测框架，漏检 <span class="num">−35%</span></li>
       </ul></div>
     </div>
   </div>
@@ -342,103 +343,135 @@ footer .f-sub{font-size:11px;color:var(--text3)}
 <!-- PROJECTS -->
 <section id="proj" class="sec-alt">
   <div class="sec-label">Projects</div>
-  <div class="sec-title anim">项目作品</div>
+  <div class="sec-title anim">项目与创业</div>
   <div class="proj-grid">
-    <!-- 0. BCI Neuromarketing -->
-    <div class="proj-card anim" style="grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:32px">
+    <!-- 0. 燧启智能 -->
+    <div class="proj-card anim" style="grid-column:1/-1;display:grid;grid-template-columns:1.35fr 1fr;gap:28px;padding:32px">
       <div>
-        <div class="proj-badge b-live"><span class="b-dot"></span>已商业化 · 金奖项目</div>
-        <h3 style="font-size:20px">BCI神经营销系统</h3>
-        <div class="proj-sub">CTO & 联合创始人 · 便携脑电设备 + AI数据服务平台</div>
-        <p>业内首个商业化脑机接口神经营销解决方案。自研便携EEG设备+算法驱动数据平台，90秒完成消费者脑电采集与分析。已服务海底捞、佛山照明、浙江烟草等企业，累计完成<span style="color:var(--terra);font-weight:700">394万元</span>案例，签约意向合同<span style="color:var(--terra);font-weight:700">175万元</span>。</p>
-        <div class="proj-tags"><span>脑机接口</span><span>便携EEG</span><span>机器学习</span><span>情感算法</span><span>神经营销</span><span>14项授权专利</span></div>
+        <div class="proj-badge b-live"><span class="b-dot"></span>技术负责人 · 2026.03 – 至今</div>
+        <h3 style="font-size:20px">燧启智能（杭州）</h3>
+        <div class="proj-sub">制造与贸易企业 AI 应用 · 首个付费客户是一家万余 SKU 的金属流通企业，5 个模块分期交付，已全部上线</div>
+        <ul class="proj-ul">
+          <li><b>Data Agent（AI 问数）</b>：只读接入 ERP，用自然语言查销售、客户、库存；按角色做 tool 级权限隔离，防越权取数</li>
+          <li><b>ERP 业务本体（Ontology）</b>：8 个分析 Agent 并行解析用友 T+ 的 2155 张表和 1344 个视图 / 存储过程，产出 12 个域、17 类单据的字段级本体；主 Agent 交叉核验，拦下 2 条错误结论</li>
+          <li><b>补货预测</b>：19 个月 walk-forward 回测，偏差从 −6.9% 收到 −0.6%；找到会导致 +29% 超采的参数耦合，改成 shadow run + 样本外对账后再切换</li>
+          <li><b>质量与可观测</b>：自建埋点和多应用观测看板；组织 9 个 Agent 做对抗式 review，产出 64 条问题，5 个 P0 安全隐患全部修复</li>
+          <li><b>口径治理</b>：23 条业务规则收进单一 registry，每条配元断言自动校验，迭代时口径不漂移</li>
+        </ul>
+        <div class="proj-tags"><span>Data Agent</span><span>Multi-Agent</span><span>Text-to-SQL</span><span>Ontology</span><span>需求预测</span><span>可观测</span></div>
       </div>
       <div style="display:flex;flex-direction:column;justify-content:center;gap:12px">
         <div style="display:flex;gap:10px">
-          <div style="flex:1;background:var(--terra-dim);border:1px solid rgba(192,78,44,.15);border-radius:12px;padding:14px;text-align:center">
-            <div style="font-size:22px;font-weight:900;color:var(--terra)">金奖</div>
-            <div style="font-size:10px;color:var(--text3);margin-top:2px">中国国际大学生<br>创新大赛</div>
+          <div class="stat-box" style="background:var(--terra-dim);border-color:rgba(192,78,44,.15)">
+            <div class="stat-v" style="color:var(--terra)">8 Agent</div>
+            <div class="stat-k">并行解析<br>2155 张表</div>
           </div>
-          <div style="flex:1;background:var(--forest-dim);border:1px solid rgba(74,124,89,.15);border-radius:12px;padding:14px;text-align:center">
-            <div style="font-size:22px;font-weight:900;color:var(--forest)">421万</div>
-            <div style="font-size:10px;color:var(--text3);margin-top:2px">参赛项目<br>151个国家</div>
+          <div class="stat-box" style="background:var(--forest-dim);border-color:rgba(74,124,89,.15)">
+            <div class="stat-v" style="color:var(--forest)">−0.6%</div>
+            <div class="stat-k">19 个月回测<br>补货偏差</div>
           </div>
         </div>
         <div style="display:flex;gap:10px">
-          <div style="flex:1;background:var(--amber-dim);border:1px solid rgba(201,138,60,.15);border-radius:12px;padding:14px;text-align:center">
-            <div style="font-size:22px;font-weight:900;color:var(--amber)">394万</div>
-            <div style="font-size:10px;color:var(--text3);margin-top:2px">已完成案例<br>含上市公司</div>
+          <div class="stat-box" style="background:var(--amber-dim);border-color:rgba(201,138,60,.15)">
+            <div class="stat-v" style="color:var(--amber)">5 / 5</div>
+            <div class="stat-k">P0 安全隐患<br>全部修复</div>
           </div>
-          <div style="flex:1;background:var(--earth-dim);border:1px solid rgba(122,92,62,.15);border-radius:12px;padding:14px;text-align:center">
-            <div style="font-size:22px;font-weight:900;color:var(--earth)">23项</div>
-            <div style="font-size:10px;color:var(--text3);margin-top:2px">专利申请<br>含3项PCT</div>
+          <div class="stat-box" style="background:var(--earth-dim);border-color:rgba(122,92,62,.15)">
+            <div class="stat-v" style="color:var(--earth)">5 个模块</div>
+            <div class="stat-k">分期交付<br>全部上线</div>
           </div>
         </div>
-        <a href="https://cic.tju.edu.cn/info/1040/4784.htm" target="_blank" class="proj-link" style="margin-top:4px">天津大学官方报道 →</a>
       </div>
     </div>
 
-    <!-- 1. JobPilot -->
-    <div class="proj-card anim">
-      <div style="border-radius:12px;overflow:hidden;margin-bottom:14px;border:1px solid var(--border)">
-        <img src="jobpilot-preview.gif" loading="lazy" alt="JobPilot Demo" style="width:100%;display:block">
+    <!-- 1. BCI -->
+    <div class="proj-card anim" style="grid-column:1/-1;display:grid;grid-template-columns:1.35fr 1fr;gap:28px;padding:32px">
+      <div>
+        <div class="proj-badge b-live"><span class="b-dot"></span>联合创始人 / CTO · 2023 – 2024</div>
+        <h3 style="font-size:20px">脑机接口消费者洞察</h3>
+        <div class="proj-sub">便携 EEG 设备 + 情绪识别 · 第九届「互联网+」全国金奖</div>
+        <p>4 人创始团队，我负责技术。搭了 EEG 信号处理和情绪识别的 ML pipeline，便携脑电设备采集的数据自动生成 90 秒消费者洞察报告。完成海底捞、佛山照明等企业案例，合计 <span style="color:var(--terra);font-weight:700">¥394 万</span>。</p>
+        <div class="proj-tags"><span>EEG</span><span>信号处理</span><span>情绪识别</span><span>ML Pipeline</span><span>Neuromarketing</span></div>
+        <a href="https://cic.tju.edu.cn/info/1040/4784.htm" target="_blank" class="proj-link">天津大学报道 →</a>
       </div>
-      <div class="proj-badge b-live"><span class="b-dot"></span>已上线</div>
-      <h3>JobPilot</h3>
-      <div class="proj-sub">AI求职引擎 — 验证岗位真实性 + 生成定制求职信</div>
-      <p>上传简历，系统通过Greenhouse/Lever API搜索50+顶级公司，每个岗位验证是否仍在招聘（消灭ghost job），Claude自动生成针对性求职信。Google OAuth + Stripe订阅 + Railway部署。</p>
-      <div class="proj-tags"><span>Next.js 14</span><span>Flask</span><span>Claude API</span><span>Stripe</span><span>PostgreSQL</span></div>
-      <a href="https://jobpilot-plum.vercel.app" target="_blank" class="proj-link" style="background:var(--forest-dim);border:1px solid rgba(74,124,89,.2);padding:3px 10px;border-radius:100px;color:var(--forest);margin-top:12px">在线体验 →</a>
+      <div style="display:flex;flex-direction:column;justify-content:center;gap:12px">
+        <div style="display:flex;gap:10px">
+          <div class="stat-box" style="background:var(--terra-dim);border-color:rgba(192,78,44,.15)">
+            <div class="stat-v" style="color:var(--terra)">全国金奖</div>
+            <div class="stat-k">第九届<br>「互联网+」大赛</div>
+          </div>
+          <div class="stat-box" style="background:var(--amber-dim);border-color:rgba(201,138,60,.15)">
+            <div class="stat-v" style="color:var(--amber)">¥394 万</div>
+            <div class="stat-k">企业案例<br>合计</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px">
+          <div class="stat-box" style="background:var(--forest-dim);border-color:rgba(74,124,89,.15)">
+            <div class="stat-v" style="color:var(--forest)">90 秒</div>
+            <div class="stat-k">采集到<br>出报告</div>
+          </div>
+          <div class="stat-box" style="background:var(--earth-dim);border-color:rgba(122,92,62,.15)">
+            <div class="stat-v" style="color:var(--earth)">4 人</div>
+            <div class="stat-k">创始团队<br>负责技术</div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <!-- 2. Gold Monitor -->
     <div class="proj-card anim">
       <div style="border-radius:12px;overflow:hidden;margin-bottom:14px;border:1px solid var(--border)">
         <img src="gold-monitor-preview.gif" loading="lazy" alt="Gold Monitor Demo" style="width:100%;display:block">
       </div>
-      <div class="proj-badge b-live"><span class="b-dot"></span>生产运行中</div>
+      <div class="proj-badge b-live"><span class="b-dot"></span>独立开发 · 2026.03 – 至今</div>
       <h3>Gold Monitor</h3>
-      <div class="proj-sub">XAUUSD实时交易信号系统</div>
-      <p>7×24小时自主运行。5因子技术评分（RSI/MACD/布林/成交量/多周期），ATR动态止损，2:1风险回报比，Bark手机推送。macOS launchd开机自启，全自动运行。</p>
-      <div class="proj-tags"><span>Python</span><span>FastAPI</span><span>WebSocket</span><span>技术分析</span><span>Bark</span></div>
+      <div class="proj-sub">XAUUSD 交易信号系统 · 记忆—推理—反思闭环</div>
+      <p>17 个模块的实时 pipeline：多因子打分 → 市场状态识别 → 历史信号记忆召回（BM25）→ 规则 + LLM 反方质疑 → 风控闸门 → 平仓后自动复盘，结果写回记忆。</p>
+      <div class="proj-tags"><span>Python</span><span>Agent Memory</span><span>BM25</span><span>LLM Critic</span><span>风控</span></div>
     </div>
-    <!-- 3. Live Assistant -->
+    <!-- 3. JobPilot -->
+    <div class="proj-card anim">
+      <div style="border-radius:12px;overflow:hidden;margin-bottom:14px;border:1px solid var(--border)">
+        <img src="jobpilot-preview.gif" loading="lazy" alt="JobPilot Demo" style="width:100%;display:block">
+      </div>
+      <div class="proj-badge b-beta"><span class="b-dot"></span>独立开发并上线 · 2026.03</div>
+      <h3>JobPilot</h3>
+      <div class="proj-sub">AI 求职 SaaS · 只展示确认在招的岗位</div>
+      <p>求职网站上大量岗位其实早就关了。JobPilot 接 Greenhouse / Lever API 做多级校验，只展示确认在招的岗位；Claude API 做简历解析和岗位匹配。Next.js + Flask + PostgreSQL，接了 Stripe 订阅。</p>
+      <div class="proj-tags"><span>Next.js</span><span>Flask</span><span>Claude API</span><span>PostgreSQL</span><span>Stripe</span></div>
+    </div>
+    <!-- 4. Live Assistant -->
     <div class="proj-card anim">
       <div style="border-radius:12px;overflow:hidden;margin-bottom:14px;border:1px solid var(--border)">
         <img src="live-assistant-preview.gif" loading="lazy" alt="Live Assistant Demo" style="width:100%;display:block">
       </div>
       <div class="proj-badge b-beta"><span class="b-dot"></span>Beta</div>
       <h3>Live Assistant</h3>
-      <div class="proj-sub">实时AI面试教练</div>
-      <p>Whisper实时转录，45+模式匹配自动识别面试问题，Ollama流式生成建议回答。从检测到首token显示 &lt;8秒。</p>
-      <div class="proj-tags"><span>Whisper</span><span>Ollama</span><span>FastAPI</span><span>流式推理</span></div>
+      <div class="proj-sub">实时 AI 面试助手</div>
+      <p>Whisper 实时转写，45+ 条规则识别面试问题、弱信号再交给 LLM 确认，Ollama 流式生成参考回答。从问题结束到第一个 token 出现 &lt;8 秒。</p>
+      <div class="proj-tags"><span>Whisper</span><span>Ollama</span><span>FastAPI</span><span>Streaming</span></div>
       <a href="https://github.com/CherishChenCherish/live-assistant" target="_blank" class="proj-link">查看源码 →</a>
     </div>
-    <!-- 4. AI-PM -->
+    <!-- 5. AI-PM -->
     <div class="proj-card anim">
       <div class="proj-badge b-dev"><span class="b-dot"></span>开发中</div>
       <h3>AI-PM</h3>
-      <div class="proj-sub">AI原生项目管理</div>
-      <p>全栈PM应用：任务、目标、时间、日历，内置Ollama/OpenAI助手。React + FastAPI + SQLite。</p>
+      <div class="proj-sub">AI 项目管理工具</div>
+      <p>任务、目标、时间记录、日历，内置 Ollama / OpenAI 助手做计划拆解和周复盘。React + FastAPI + SQLite，目前只在本地跑。</p>
       <div class="proj-tags"><span>React</span><span>FastAPI</span><span>SQLite</span><span>Ollama</span></div>
     </div>
   </div>
-  <div class="proj-grid-3" style="margin-top:16px;max-width:960px">
+  <div class="proj-grid" style="margin-top:16px">
     <div class="proj-card anim">
-      <h3>实时欺诈检测</h3>
-      <div class="proj-sub">端到端ML部署</div>
-      <p>284K笔交易，XGBoost+SMOTE达<span style="color:var(--forest);font-weight:700">0.94 AUPRC</span>。Flask API部署AWS EC2+Docker，推理 &lt;50ms。</p>
-      <div class="proj-tags"><span>XGBoost</span><span>Flask</span><span>AWS</span><span>Docker</span></div>
-    </div>
-    <div class="proj-card anim">
-      <h3>在线话语NLP</h3>
-      <div class="proj-sub">研究助理 · Prof. McDonald</div>
-      <p>Chrome扩展（GPT+BERT+Perspective API）对8K+评论评分。JS+Supabase实时管道覆盖Reddit/Twitter。</p>
-      <div class="proj-tags"><span>NLP</span><span>BERT</span><span>GPT</span><span>Supabase</span></div>
+      <h3>论文 · Information Systems Frontiers</h3>
+      <div class="proj-sub">2025 · SCI，JCR Q1 · 第二作者</div>
+      <p>Sun J., <b>Chen X.</b>, et al. A Fine-grained Classification Method for Cross-domain Policy Texts Based on Instruction Tuning.</p>
+      <div class="proj-tags"><span>Instruction Tuning</span><span>文本分类</span><span>NLP</span></div>
     </div>
     <div class="proj-card anim">
       <h3>睡眠与高血压</h3>
       <div class="proj-sub">独立研究 · NHANES</div>
-      <p>NHANES 2017-2020（n=8,200+），逻辑回归+梯度提升建模，AUC 0.78，控制7个混杂因素。</p>
+      <p>NHANES 2017–2020（n=8,200+），逻辑回归 + 梯度提升建模，AUC 0.78，控制 7 个混杂因素。</p>
       <div class="proj-tags"><span>statsmodels</span><span>scikit-learn</span><span>流行病学</span></div>
     </div>
   </div>
@@ -447,28 +480,25 @@ footer .f-sub{font-size:11px;color:var(--text3)}
 <!-- AWARDS -->
 <section>
   <div class="sec-label">Awards</div>
-  <div class="sec-title anim">竞赛与荣誉</div>
+  <div class="sec-title anim">竞赛</div>
   <div class="award-row">
     <div class="award-card anim">
       <div class="award-icon">&#127942;</div>
-      <div class="award-name">互联网+创新创业大赛</div>
-      <div class="award-desc">全球最大创新竞赛</div>
-      <div class="award-stat aw-terra">金奖</div>
-      <div style="font-size:11px;color:var(--text3);margin-top:4px">340万项目 · 111个国家</div>
+      <div class="award-name">中国国际「互联网+」大学生创新创业大赛</div>
+      <div class="award-desc">第九届 · 脑机接口项目</div>
+      <div class="award-stat aw-terra">全国金奖</div>
     </div>
     <div class="award-card anim">
       <div class="award-icon">&#128202;</div>
       <div class="award-name">Kaggle LLM Science Exam</div>
-      <div class="award-desc">大语言模型推理竞赛</div>
+      <div class="award-desc">11,962 人参赛</div>
       <div class="award-stat aw-forest">Top 5%</div>
-      <div style="font-size:11px;color:var(--text3);margin-top:4px">11,962支参赛队伍</div>
     </div>
     <div class="award-card anim">
-      <div class="award-icon">&#127891;</div>
-      <div class="award-name">Dean's List</div>
-      <div class="award-desc">华盛顿大学学业优秀</div>
-      <div class="award-stat aw-amber">连续10学期</div>
-      <div style="font-size:11px;color:var(--text3);margin-top:4px">GPA 3.86 / 4.0</div>
+      <div class="award-icon">&#128200;</div>
+      <div class="award-name">Kaggle Student Performance</div>
+      <div class="award-desc">19,097 人参赛</div>
+      <div class="award-stat aw-amber">Top 8%</div>
     </div>
   </div>
 </section>
@@ -476,24 +506,24 @@ footer .f-sub{font-size:11px;color:var(--text3)}
 <!-- SKILLS -->
 <section id="skills" class="sec-alt">
   <div class="sec-label">Skills</div>
-  <div class="sec-title anim">技术栈</div>
+  <div class="sec-title anim">技能</div>
   <div class="skill-section">
     <div class="skill-level sl-expert anim">
-      <div class="skill-level-name">精通</div>
+      <div class="skill-level-name">大模型应用</div>
       <div class="skill-list">
-        <span>Python</span><span>SQL</span><span>pandas</span><span>scikit-learn</span><span>NumPy</span><span>数据分析</span><span>A/B测试</span><span>特征工程</span>
+        <span>Agent（记忆 / tool calling / 反思纠错）</span><span>RAG 与向量检索</span><span>Context / Prompt Engineering</span><span>MCP</span><span>Skills</span><span>Multi-Agent 编排</span><span>LLM-as-judge 评测</span><span>幻觉与 prompt injection 防护</span>
       </div>
     </div>
     <div class="skill-level sl-proficient anim">
-      <div class="skill-level-name">熟练</div>
+      <div class="skill-level-name">AI 编程</div>
       <div class="skill-list">
-        <span>PyTorch</span><span>XGBoost</span><span>FastAPI</span><span>React</span><span>NLP / BERT</span><span>深度学习</span><span>WebSocket</span><span>ETL管道</span><span>Git</span><span>LLM / Ollama</span>
+        <span>Claude Code（自建 26 个命令、Hooks、审查子代理）</span><span>Cursor</span>
       </div>
     </div>
     <div class="skill-level sl-familiar anim">
-      <div class="skill-level-name">了解</div>
+      <div class="skill-level-name">工程与数据</div>
       <div class="skill-list">
-        <span>AWS (EC2)</span><span>Docker</span><span>Java</span><span>R</span><span>JavaScript</span><span>Redis</span><span>Power BI</span><span>Tableau</span>
+        <span>Python</span><span>Java</span><span>TypeScript</span><span>SQL</span><span>Flask</span><span>Next.js</span><span>PyTorch</span><span>SQL Server</span><span>PostgreSQL</span><span>Redis</span><span>Linux</span><span>Git</span>
       </div>
     </div>
   </div>
@@ -506,24 +536,11 @@ footer .f-sub{font-size:11px;color:var(--text3)}
   <div class="creator-block anim">
     <div class="creator-num"><span class="n">10K</span><span class="u">+</span></div>
     <div class="creator-text">
-      <h3>能写代码，也能讲故事</h3>
-      <p>活跃于抖音和小红书，把复杂的AI技术变成普通人能理解的内容。这不是兴趣爱好——是一种稀缺能力：能让技术团队和业务团队说同一种语言。对投资人说人话，对工程师说行话，都游刃有余。</p>
+      <h3>抖音 / 小红书</h3>
+      <p>写 AI 技术科普，也发旅行和 3D 打印的日常。</p>
       <div class="creator-tags">
-        <span>抖音</span><span>小红书</span><span>AI技术分享</span><span>旅游生活</span><span>3D打印/建模</span><span>技术传播</span>
+        <span>AI 技术分享</span><span>旅行</span><span>3D 打印 / 建模</span>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- PHILOSOPHY — Narrative Transportation -->
-<section class="sec-alt" style="padding:60px 40px">
-  <div style="max-width:640px;margin:0 auto;text-align:center">
-    <div class="sec-label">Philosophy</div>
-    <div class="sec-title anim" style="margin-bottom:28px">我的工作方式</div>
-    <div class="anim" style="font-size:15px;color:var(--text2);line-height:2">
-      <p style="margin-bottom:16px">大多数人在学校学会建模型，在公司学会写代码。<br><strong style="color:var(--text)">我学会了把两者合在一起，然后发布出去。</strong></p>
-      <p style="margin-bottom:16px">我的每个项目都遵循同一个原则：<strong style="color:var(--terra)">如果没人在用，就不算完成。</strong></p>
-      <p style="font-size:13px;color:var(--text3);font-style:italic;border-left:2px solid var(--border2);padding-left:14px;text-align:left;max-width:400px;margin:24px auto 0">不管是投资、招聘还是合作——你要找的是一个能独立把事情做完的人。我就是。</p>
     </div>
   </div>
 </section>
@@ -534,8 +551,7 @@ footer .f-sub{font-size:11px;color:var(--text3)}
     <a href="https://linkedin.com/in/xinlong-chen-81116b234/" target="_blank">LinkedIn</a>
     <a href="https://github.com/CherishChenCherish" target="_blank">GitHub</a>
   </div>
-  <div style="margin:12px 0"><a href="mailto:xinlong.chen@yale.edu" style="padding:10px 24px;border-radius:100px;background:var(--terra);color:#fff;font-size:12px;font-weight:600;text-decoration:none;transition:all .3s;display:inline-block">有想法？聊一聊 &rarr;</a></div>
-  <div class="f-sub">陈鑫隆 · 耶鲁大学 '27 · 选择性地对合适的机会开放</div>
+  <div class="f-sub">陈鑫隆 · 耶鲁大学 2027 届</div>
 </footer>
 
 <script>
